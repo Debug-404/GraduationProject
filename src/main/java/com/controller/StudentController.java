@@ -13,7 +13,7 @@ public class StudentController {
 
     @Resource
     StudentServiceImpl studentService;
-    
+
     @AopLog
     @GetMapping("/get")
     public Result selectAll() {
@@ -23,7 +23,7 @@ public class StudentController {
     @AopLog
     @GetMapping("/hello")
     public String hello() {
-        if (false) throw new RuntimeException("您的氪金力度不足，无法访问！");
+        if (false) throw new RuntimeException("异常测试");
         return "hello";
     }
 }

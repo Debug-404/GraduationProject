@@ -37,7 +37,7 @@ public class Result {
     }
 
     public static Result error(String message) {
-        return new Result(Success_CODE, message);
+        return new Result(Error_CODE, message);
     }
 
     public static Result unauthorized(String message) {
