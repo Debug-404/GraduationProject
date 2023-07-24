@@ -15,7 +15,7 @@ public class JwtUtils {
      */
     private static final long TOKEN_EXPIRED_TIME = 7 * 24 * 60 * 60 * 1000;
     /**
-     * jwt 加密解密密钥(可自行填写)
+     * jwt 加密解密密钥
      */
     private static final String KEY = "adfna^^DKSF(_)*";
 

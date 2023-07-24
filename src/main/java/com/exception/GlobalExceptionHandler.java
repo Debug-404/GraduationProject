@@ -9,7 +9,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    //GlobalExceptionHandler 全局异常处理
+    /**
+     * 全局异常处理
+     *
+     * @param e
+     * @return Result
+     */
     @ExceptionHandler(Exception.class)
     public Result error(Exception e) {  //可以直接添加形参来获取异常
         log.error("error: " + e.getMessage());

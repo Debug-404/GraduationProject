@@ -10,6 +10,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 拦截器 用于验证token
+ */
 public class TokenInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -30,9 +33,8 @@ public class TokenInterceptor implements HandlerInterceptor {
         }
 
         result.setCode(Result.Unauthorized_CODE);
-        //将map转为json
         String s = JSON.toJSONString(result);
-        // 相应json数据
+        // 返回json数据
         response.setContentType("application/json;charset=UTF-8");
         response.getWriter().println(s);
         return false;

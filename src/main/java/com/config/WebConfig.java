@@ -14,6 +14,11 @@ import java.util.List;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
+    /**
+     * 拦截器
+     *
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TokenInterceptor())
@@ -23,7 +28,11 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/**");
     }
 
-    // 消息转化器
+    /**
+     * 消息转换器
+     *
+     * @param converters
+     */
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         FastJsonHttpMessageConverter messageConverter = new FastJsonHttpMessageConverter();

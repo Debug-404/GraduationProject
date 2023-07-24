@@ -21,8 +21,14 @@ import java.util.Date;
 public class LogAspect {
 
     @Pointcut("@annotation(com.annotation.AopLog)")
-    public void logAspect(){}
+    public void logAspect() {
+    }
 
+    /**
+     * AOP日志管理
+     *
+     * @param joinPoint
+     */
     @Before("logAspect()")
     public void beforePkhLog(JoinPoint joinPoint) {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -32,7 +38,7 @@ public class LogAspect {
         System.out.println("========================================= Method " + methodName + "() begin=========================================");
         // 执行时间
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date d= new Date();
+        Date d = new Date();
         String time = sdf.format(d);
         System.out.println("Time           : " + time);
         // 打印请求 URL
