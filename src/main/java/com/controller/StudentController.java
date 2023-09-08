@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.annotation.AopLog;
+import com.annotation.RequestLog;
 import com.service.Impl.StudentServiceImpl;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,13 +14,13 @@ public class StudentController {
     @Resource
     StudentServiceImpl studentService;
 
-    @AopLog
+    @RequestLog
     @GetMapping("/get")
     public Result selectAll() {
         return Result.success("全部学生的数据", studentService.selectAll());
     }
 
-    @AopLog
+    @RequestLog
     @GetMapping("/hello")
     public String hello() {
         if (true) throw new RuntimeException("异常测试");

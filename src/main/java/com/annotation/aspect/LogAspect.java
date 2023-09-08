@@ -20,7 +20,7 @@ import java.util.Date;
 @Slf4j
 public class LogAspect {
 
-    @Pointcut("@annotation(com.annotation.AopLog)")
+    @Pointcut("@annotation(com.annotation.RequestLog)")
     public void logAspect() {
     }
 
