@@ -2,7 +2,6 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- namespace= 绑定一个对应的DAO/mapper接口-->
 <mapper namespace="com.dao.StudentMapper">
 
     <resultMap id="StudentMap" type="com.pojo.Student">
