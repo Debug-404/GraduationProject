@@ -21,8 +21,8 @@ public class StudentController {
     }
 
     @RequestLog
-    @GetMapping("/hello")
-    public String hello() {
+    @GetMapping("/test")
+    public String test() {
         if (true) throw new RuntimeException("异常测试");
         return "hello";
     }
