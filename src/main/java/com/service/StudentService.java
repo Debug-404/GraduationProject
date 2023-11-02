@@ -1,6 +1,6 @@
 package com.service;
 
-import com.pojo.Student;
+import com.model.Student;
 
 import java.util.List;
 

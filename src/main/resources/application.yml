@@ -13,3 +13,4 @@ logging:
   level:
     root: info
     com: debug
+debug: true

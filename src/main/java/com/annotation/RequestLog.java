@@ -1,15 +1,13 @@
 package com.annotation;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
-/**
- * Controller 请求数据日志切面
- */
+
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
+@Documented
 public @interface RequestLog {
-
+/*
+  Controller 请求数据日志切面
+ */
 }

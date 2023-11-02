@@ -27,9 +27,6 @@ public class Result {
     /**
      * 请求成功并且返回数据
      *
-     * @param message
-     * @param data
-     * @return
      */
     public static Result success(String message, Object data) {
         return new Result(Success_CODE, message, data);
@@ -45,9 +42,6 @@ public class Result {
 
     /**
      * 请求失败
-     *
-     * @param message
-     * @return
      */
     public static Result error(String message) {
         return new Result(Error_CODE, message);
@@ -55,9 +49,6 @@ public class Result {
 
     /**
      * 未经授权
-     *
-     * @param message
-     * @return
      */
     public static Result unauthorized(String message) {
         return new Result(Unauthorized_CODE, message);

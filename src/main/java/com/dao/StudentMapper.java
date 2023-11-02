@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.pojo.Student;
+import com.model.Student;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

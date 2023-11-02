@@ -1,7 +1,7 @@
 package com.service.Impl;
 
 import com.dao.StudentMapper;
-import com.pojo.Student;
+import com.model.Student;
 import com.service.StudentService;
 import org.springframework.stereotype.Service;
 
