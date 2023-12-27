@@ -7,7 +7,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 
 mybatis:
-  type-aliases-package: com.pojo
+  type-aliases-package: com.model
   mapper-locations: classpath:/mybatis/*.xml
 logging:
   level:

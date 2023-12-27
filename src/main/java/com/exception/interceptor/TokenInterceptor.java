@@ -1,4 +1,4 @@
-package com.interceptor;
+package com.exception.interceptor;
 
 import com.alibaba.fastjson2.JSON;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
@@ -15,14 +15,15 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class TokenInterceptor implements HandlerInterceptor {
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+            throws Exception {
         Result result = new Result();
-        //获取请求头中令牌
+        // 获取请求头中令牌
         String token = request.getHeader("token");
         try {
-            //验证令牌
+            // 验证令牌
             JwtUtils.verifyToken(token);
-            //验证成功，放行请求
+            // 验证成功，放行请求
             return true;
         } catch (SignatureVerificationException e) {
             result.setMessage("无效签名!");
