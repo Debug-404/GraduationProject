@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-public class StudentController {
+public class test {
 
     @Resource
     StudentServiceImpl studentService;
