@@ -3,8 +3,6 @@ package com.controller;
 import com.annotation.PassToken;
 import com.annotation.RequestLog;
 import com.service.AdminService;
-import com.service.Impl.AdminServiceImpl;
-import com.service.Impl.StudentServiceImpl;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -9,7 +9,6 @@ import java.util.List;
 @Mapper
 @Repository
 public interface StudentMapper {
-    List<Student> selectAll();
 
     Student selectStudentById(String id);
 
