@@ -2,11 +2,12 @@ package com.controller;
 
 import com.annotation.PassToken;
 import com.annotation.RequestLog;
-import com.model.Student;
 import com.model.User;
 import com.service.Impl.StudentServiceImpl;
 import com.utils.Result;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
