@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -18,4 +19,6 @@ public interface StudentMapper {
     int deleteStudent(String id);
 
     int updateStudent(Student student);
+
+    int updatePassword(Map<String, String> map);
 }

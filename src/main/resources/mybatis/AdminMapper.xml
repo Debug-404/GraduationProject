@@ -5,4 +5,9 @@
 <mapper namespace="com.dao.AdminMapper">
 
 
+    <select id="selectAdminById" resultType="com.model.Admin">
+        select id, pass_word, name, sex, phone
+        from admin
+        where id = #{id};
+    </select>
 </mapper>

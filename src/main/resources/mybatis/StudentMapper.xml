@@ -10,11 +10,12 @@
     </resultMap>
 
     <select id="selectAll" resultMap="StudentMap">
-        select *
+        select id, pass_word, name, age, sex, phone, room_no
         from student
+        where flag != 0
     </select>
     <select id="selectStudentById" resultType="com.model.Student">
-        select *
+        select id, pass_word, name, age, sex, phone, room_no
         from student
         where id = #{id}
     </select>
@@ -33,6 +34,11 @@
     <update id="updateStudent" parameterType="com.model.Student">
         update student
         SET name=#{name}
+        where id = #{id}
+    </update>
+    <update id="updatePassword" parameterType="map">
+        update student
+        set pass_word = #{password}
         where id = #{id}
     </update>
 </mapper>
