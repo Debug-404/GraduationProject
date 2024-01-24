@@ -2,8 +2,10 @@ package com.service;
 
 import com.model.Student;
 
-public interface StudentService {
+import java.util.List;
 
+public interface StudentService {
+    List<Student> selectAll();
 
     Student selectStudentById(String id);
 
