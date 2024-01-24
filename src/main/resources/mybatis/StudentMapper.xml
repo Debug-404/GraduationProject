@@ -4,13 +4,27 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.StudentMapper">
 
-    <resultMap id="StudentMap" type="com.model.Student">
-        <result property="roomNo" column="room_no"/>
-    </resultMap>
 
-    <select id="selectAll" resultMap="StudentMap">
+    <select id="selectStudentById" resultType="com.model.Student">
         select *
         from student
+        where id = #{id}
     </select>
+    
+    <insert id="addStudent" parameterType="com.model.Student">
+        insert into student(id, pass_word, name, age, sex, phone, room_no)
+            value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone}, #{roomNo})
+    </insert>
 
+    <delete id="deleteStudent" parameterType="String">
+        delete
+        from student
+        where id = #{id}
+    </delete>
+
+    <update id="updateStudent" parameterType="com.model.Student">
+        update student
+        SET name=#{name}
+        where id = #{id}
+    </update>
 </mapper>

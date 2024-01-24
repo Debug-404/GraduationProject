@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AdminMapper">
+
+    <resultMap id="StudentMap" type="com.model.Student">
+        <result property="roomNo" column="room_no"/>
+        <result property="password" column="pass_word"/>
+    </resultMap>
+    
+    <select id="selectAll" resultMap="StudentMap">
+        select *
+        from student
+    </select>
+</mapper>

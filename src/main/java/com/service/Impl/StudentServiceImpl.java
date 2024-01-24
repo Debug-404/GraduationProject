@@ -15,7 +15,22 @@ public class StudentServiceImpl implements StudentService {
     StudentMapper studentMapper;
 
     @Override
-    public List<Student> selectAll() {
-        return studentMapper.selectAll();
+    public Student selectStudentById(String id) {
+        return studentMapper.selectStudentById(id);
+    }
+
+    @Override
+    public int addStudent(Student student) {
+        return studentMapper.addStudent(student);
+    }
+
+    @Override
+    public int deleteStudent(String id) {
+        return studentMapper.deleteStudent(id);
+    }
+
+    @Override
+    public int updateStudent(Student student) {
+        return studentMapper.updateStudent(student);
     }
 }

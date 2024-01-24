@@ -8,14 +8,6 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface StudentMapper {
+public interface AdminMapper {
     List<Student> selectAll();
-
-    Student selectStudentById(String id);
-
-    int addStudent(Student student);
-
-    int deleteStudent(String id);
-
-    int updateStudent(Student student);
 }

@@ -13,4 +13,7 @@ logging:
   level:
     root: info
     com: debug
-
+server:
+  servlet:
+    encoding:
+      charset: UTF-8

@@ -2,11 +2,11 @@ package com.controller;
 
 import com.annotation.PassToken;
 import com.annotation.RequestLog;
+import com.model.Student;
+import com.model.User;
 import com.service.Impl.StudentServiceImpl;
 import com.utils.Result;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -20,8 +20,9 @@ public class Login {
 
     @PassToken
     @RequestLog
-    @RequestMapping("/login")
-    public Result login() {
+    @RequestMapping(value = "/login", produces = "application/json")
+    public Result login(@RequestBody User user) {
+        System.out.println(user.toString());
         Map<String, String> map = new HashMap<>();
         map.put("token", "hello");
         return Result.success("登录成功", map);
