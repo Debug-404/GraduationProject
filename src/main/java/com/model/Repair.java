@@ -6,7 +6,7 @@ import lombok.Data;
  * 维修员实体类
  */
 @Data
-public class repair {
+public class Repair {
     String id;
     String password;
     String name;

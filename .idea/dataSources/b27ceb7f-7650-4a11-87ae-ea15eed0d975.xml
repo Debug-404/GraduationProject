@@ -751,7 +751,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="225" parent="1" name="bishe">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-01-25.03:08:07</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-01-26.01:43:21</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="226" parent="1" name="mysql">
@@ -785,7 +785,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="235" parent="232" name="pass_word">
+    <column id="235" parent="232" name="password">
       <DasType>varchar(20)|0s</DasType>
       <Position>2</Position>
     </column>
@@ -816,7 +816,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="242" parent="233" name="pass_word">
+    <column id="242" parent="233" name="password">
       <DasType>varchar(20)|0s</DasType>
       <Position>2</Position>
     </column>

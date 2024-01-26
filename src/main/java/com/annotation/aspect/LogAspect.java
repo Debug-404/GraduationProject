@@ -21,7 +21,8 @@ import java.util.Date;
 public class LogAspect {
 
     @Pointcut("@annotation(com.annotation.RequestLog)")
-    public void logAspect() {}
+    public void logAspect() {
+    }
 
     /**
      * AOP日志管理

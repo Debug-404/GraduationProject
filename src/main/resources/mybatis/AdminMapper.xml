@@ -6,7 +6,7 @@
 
 
     <select id="selectAdminById" resultType="com.model.Admin">
-        select id, pass_word, name, sex, phone
+        select id, password, name, sex, phone
         from admin
         where id = #{id};
     </select>

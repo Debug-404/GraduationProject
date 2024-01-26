@@ -4,6 +4,7 @@ import com.annotation.PassToken;
 import com.annotation.RequestLog;
 import com.model.User;
 import com.service.Impl.StudentServiceImpl;
+import com.utils.JwtUtils;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,10 +22,16 @@ public class Login {
 
     @PassToken
     @RequestLog
-    @RequestMapping(value = "/login", produces = "application/json")
+    @RequestMapping(value = "/login")
     public Result login(@RequestBody User user) {
-        if (studentService.selectStudentById(user)) return Result.success("登录成功");
-        else return Result.unauthorized("账号或者密码错误，请重新登录");
+        if (studentService.selectStudentById(user)) {
+            Map<String, String> map = new HashMap<>();
+            map.put("id", user.getId());
+            String token = JwtUtils.createToken(map);
+            map.clear();
+            map.put("token", token);
+            return Result.success("登录成功", map);
+        } else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
     @PassToken

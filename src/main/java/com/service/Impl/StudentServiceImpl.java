@@ -23,7 +23,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean selectStudentById(User user) {
         Student student = studentMapper.selectStudentById(user.getId());
-        return student.getPassWord().equals(user.getPassword());
+        return student.getPassword().equals(user.getPassword());
     }
 
     @Override

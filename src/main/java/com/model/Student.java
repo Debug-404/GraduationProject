@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class Student {
     String id;
-    String passWord;
+    String password;
     String name;
     int age;
     String sex;
