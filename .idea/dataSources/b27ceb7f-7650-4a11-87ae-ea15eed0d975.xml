@@ -751,7 +751,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="225" parent="1" name="bishe">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-01-24.09:20:47</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-01-25.03:08:07</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="226" parent="1" name="mysql">

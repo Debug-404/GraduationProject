@@ -2,6 +2,7 @@ package com.service.Impl;
 
 import com.dao.StudentMapper;
 import com.model.Student;
+import com.model.User;
 import com.service.StudentService;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +21,9 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student selectStudentById(String id) {
-        return studentMapper.selectStudentById(id);
+    public boolean selectStudentById(User user) {
+        Student student = studentMapper.selectStudentById(user.getId());
+        return student.getPassWord().equals(user.getPassword());
     }
 
     @Override

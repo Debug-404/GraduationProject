@@ -1,5 +1,7 @@
 package com.service;
 
-public interface AdminService {
+import com.model.Admin;
 
+public interface AdminService {
+    Admin selectAdminById(String id);
 }

@@ -3,16 +3,13 @@ package com.model;
 import lombok.Data;
 
 /**
- * 学生实体类
+ * 维修员实体类
  */
 @Data
-public class Student {
+public class repair {
     String id;
-    String passWord;
+    String password;
     String name;
-    int age;
     String sex;
     String phone;
-    String roomNo;
-    int flag = 1;
 }

@@ -23,10 +23,8 @@ public class Login {
     @RequestLog
     @RequestMapping(value = "/login", produces = "application/json")
     public Result login(@RequestBody User user) {
-        System.out.println(user.toString());
-        Map<String, String> map = new HashMap<>();
-        map.put("token", "hello");
-        return Result.success("登录成功", map);
+        if (studentService.selectStudentById(user)) return Result.success("登录成功");
+        else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
     @PassToken
