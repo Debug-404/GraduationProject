@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,14 +24,12 @@ public class Login {
     @PassToken
     @RequestLog
     @RequestMapping(value = "/login")
-    public Result login(@RequestBody User user) {
+    public Result login(@RequestBody User user, HttpServletResponse response) {
         if (studentService.selectStudentById(user)) {
             Map<String, String> map = new HashMap<>();
             map.put("id", user.getId());
-            String token = JwtUtils.createToken(map);
-            map.clear();
-            map.put("token", token);
-            return Result.success("登录成功", map);
+            response.setHeader("token", JwtUtils.createToken(map));
+            return Result.success("登录成功");
         } else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
