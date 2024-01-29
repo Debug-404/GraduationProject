@@ -8,7 +8,9 @@ import java.util.List;
 public interface StudentService {
     List<Student> selectAll();
 
-    boolean selectStudentById(User user);
+    Student selectStudentById(String id);
+
+    boolean selectPassword(User user);
 
     int addStudent(Student student);
 

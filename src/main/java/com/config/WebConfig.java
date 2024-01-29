@@ -23,9 +23,9 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TokenInterceptor())
                 // 添加拦截路径
-                .addPathPatterns("/**");
-        // 添加放行路径
-        //.excludePathPatterns("/**");
+                //.addPathPatterns("/**");
+                // 添加放行路径
+                .excludePathPatterns("/**");
     }
 
 

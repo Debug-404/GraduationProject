@@ -751,7 +751,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="225" parent="1" name="bishe">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-01-26.01:43:21</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-01-29.03:16:03</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="226" parent="1" name="mysql">
@@ -776,81 +776,127 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="233" parent="225" name="student">
+    <table id="233" parent="225" name="order">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="234" parent="232" name="id">
+    <table id="234" parent="225" name="student">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="235" parent="232" name="id">
       <DasType>varchar(10)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="235" parent="232" name="password">
+    <column id="236" parent="232" name="password">
       <DasType>varchar(20)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="236" parent="232" name="name">
+    <column id="237" parent="232" name="name">
       <DasType>varchar(10)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="237" parent="232" name="sex">
+    <column id="238" parent="232" name="sex">
       <DasType>varchar(2)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="238" parent="232" name="phone">
+    <column id="239" parent="232" name="phone">
       <DasType>varchar(13)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="239" parent="232" name="PRIMARY">
+    <index id="240" parent="232" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="240" parent="232" name="PRIMARY">
+    <key id="241" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="241" parent="233" name="id">
-      <DasType>varchar(10)|0s</DasType>
+    <column id="242" parent="233" name="order_number">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="242" parent="233" name="password">
-      <DasType>varchar(20)|0s</DasType>
+    <column id="243" parent="233" name="sid">
+      <DasType>varchar(10)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="243" parent="233" name="name">
-      <DasType>varchar(10)|0s</DasType>
+    <column id="244" parent="233" name="room_no">
+      <DasType>varchar(5)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="244" parent="233" name="age">
-      <DasType>int(11)|0s</DasType>
+    <column id="245" parent="233" name="sphone">
+      <DasType>varchar(13)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="245" parent="233" name="sex">
-      <DasType>varchar(2)|0s</DasType>
+    <column id="246" parent="233" name="rid">
+      <DasType>varchar(10)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="246" parent="233" name="phone">
+    <column id="247" parent="233" name="rphone">
       <DasType>varchar(13)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="247" parent="233" name="room_no">
-      <DasType>varchar(5)|0s</DasType>
+    <column id="248" parent="233" name="time">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="248" parent="233" name="flag">
-      <DasType>tinyint(4)|0s</DasType>
-      <DefaultExpression>1</DefaultExpression>
-      <Position>8</Position>
-    </column>
     <index id="249" parent="233" name="PRIMARY">
-      <ColNames>id</ColNames>
+      <ColNames>order_number</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
     <key id="250" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="251" parent="234" name="id">
+      <DasType>varchar(10)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="252" parent="234" name="password">
+      <DasType>varchar(20)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="253" parent="234" name="name">
+      <DasType>varchar(10)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="254" parent="234" name="age">
+      <DasType>int(11)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="255" parent="234" name="sex">
+      <DasType>varchar(2)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="256" parent="234" name="phone">
+      <DasType>varchar(13)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="257" parent="234" name="room_no">
+      <DasType>varchar(5)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="258" parent="234" name="flag">
+      <DasType>tinyint(4)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <index id="259" parent="234" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="260" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

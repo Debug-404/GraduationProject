@@ -34,7 +34,11 @@
 
     <update id="updateStudent" parameterType="com.model.Student">
         update student
-        SET name=#{name}
+        SET name    = #{name},
+            age     = #{age},
+            sex     =#{sex},
+            phone   = #{phone},
+            room_no = #{roomNo}
         where id = #{id}
           and flag != 0
     </update>

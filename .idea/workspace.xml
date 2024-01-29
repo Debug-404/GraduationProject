@@ -8,9 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/Impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/Impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +40,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../../apache-maven/maven-repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.76/tomcat-embed-core-9.0.76-sources.jar!/javax/servlet/http/HttpServlet.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.76/tomcat-embed-core-9.0.76-sources.jar!/javax/servlet/http/HttpServlet.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,6 +70,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;JUnit.SpringBootVueApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringBootVueApplicationTests.test1.executor&quot;: &quot;Run&quot;,
     &quot;Maven.SpringBootVue [clean].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -74,6 +83,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,7 +91,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;cn.yiiguxing.plugin.translate&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -93,23 +103,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.SpringBootVueApplication">
-    <configuration name="SpringBootVueApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpringBootVue" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.SpringBootVueApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="SpringBootVueApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="SpringBootVue" />
@@ -118,11 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.SpringBootVueApplicationTests.contextLoads" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -189,6 +178,20 @@
       <workItem from="1706233118597" duration="2588000" />
       <workItem from="1706237583726" duration="6240000" />
       <workItem from="1706249859166" duration="874000" />
+      <workItem from="1706278719252" duration="115000" />
+      <workItem from="1706357784412" duration="66000" />
+      <workItem from="1706358185004" duration="81000" />
+      <workItem from="1706358324270" duration="80000" />
+      <workItem from="1706491377075" duration="48000" />
+      <workItem from="1706491431308" duration="862000" />
+      <workItem from="1706493597297" duration="1045000" />
+      <workItem from="1706494900931" duration="203000" />
+      <workItem from="1706495170929" duration="5561000" />
+      <workItem from="1706510800415" duration="63000" />
+      <workItem from="1706511104655" duration="794000" />
+      <workItem from="1706512140445" duration="3981000" />
+      <workItem from="1706516145454" duration="1197000" />
+      <workItem from="1706517411564" duration="1555000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -278,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706245036772</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="nest">
+      <option name="closed" value="true" />
+      <created>1706278753477</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706278753477</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
