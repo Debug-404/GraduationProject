@@ -8,11 +8,18 @@
         <result property="roomNo" column="room_no"/>
     </resultMap>
 
-    <select id="selectAll" resultMap="StudentMap">
+    <select id="findAll" resultMap="StudentMap">
         select id, password, name, age, sex, phone, room_no
         from student
         where flag != 0
     </select>
+
+    <select id="findByLimit" resultMap="StudentMap" resultType="map">
+        select id, password, name, age, sex, phone, room_no
+        from student
+        limit #{startIndex},#{pageSize}
+    </select>
+
     <select id="selectStudentById" resultMap="StudentMap">
         select id, password, name, age, sex, phone, room_no
         from student

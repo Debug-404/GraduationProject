@@ -29,7 +29,7 @@ class SpringBootVueApplicationTests {
 
     @Test
     public void test1() {
-        studentService.selectAll().forEach((System.out::println));
+        studentService.findAll().forEach((System.out::println));
     }
 
 }

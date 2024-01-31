@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.RepairMapper">
+
+
+    <select id="selectRepairById" resultType="com.model.Repair">
+        select id, password, name, sex, phone
+        from repair
+        where id = #{id}
+        limit 1
+    </select>
+    <select id="findAll" resultType="com.model.Repair">
+        select id, password, name, sex, phone
+        from repair
+    </select>
+</mapper>

@@ -19,7 +19,7 @@ public class test {
     @RequestLog
     @GetMapping("/get")
     public Result selectAll() {
-        return Result.success("全部学生的数据", studentService.selectAll());
+        return Result.success("全部学生的数据", studentService.findAll());
     }
 
     @RequestLog

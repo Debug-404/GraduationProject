@@ -7,6 +7,7 @@ import com.model.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,8 +18,18 @@ public class StudentService {
     StudentMapper studentMapper;
 
 
-    public List<Student> selectAll() {
-        return studentMapper.selectAll();
+    public List<Student> findAll() {
+        return studentMapper.findAll();
+    }
+
+    //page
+    public List<String> findByLimit(int currentPage, int pageSize) {
+        //currentPage 第几页
+        //pageSize 每页显示几个
+        Map<String, Object> map = new HashMap<>();
+        map.put("startIndex", (currentPage - 1) * pageSize);
+        map.put("pageSize", pageSize);
+        return studentMapper.findByLimit(map);
     }
 
 
@@ -48,10 +59,9 @@ public class StudentService {
     }
 
     public void repair(Map<String, Object> map) {
-        // 学号，姓名,电话,地址 address，类型
+        // 姓名,地址 address，电话，类型,详情
         Repair repair = new Repair();
-        map.put("rid", repair.getId());
-        map.put("rphone", repair.getPhone());
+        System.out.println(map.toString());
         studentMapper.repair(map);
         System.out.println("报修");
     }

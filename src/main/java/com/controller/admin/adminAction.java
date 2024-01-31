@@ -33,7 +33,7 @@ public class adminAction {
     @RequestLog
     @PostMapping("/getAll")
     public Result getAll() {
-        return Result.success(studentService.selectAll());
+        return Result.success(studentService.findAll());
     }
 
 

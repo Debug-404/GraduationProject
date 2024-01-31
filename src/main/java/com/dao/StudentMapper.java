@@ -11,7 +11,10 @@ import java.util.Map;
 @Repository
 public interface StudentMapper {
     //获取全部学生信息
-    List<Student> selectAll();
+    List<Student> findAll();
+
+    //分页查询
+    List<String> findByLimit(Map<String, Object> map);
 
     //根据学号查询单个学生信息
     Student selectStudentById(String id);
