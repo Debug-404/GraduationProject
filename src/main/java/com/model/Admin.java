@@ -1,15 +1,13 @@
 package com.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 管理员实体类
  */
 @Data
-public class Admin {
-    String id;
-    String password;
-    String name;
-    String sex;
-    String phone;
+@ToString(callSuper = true)
+public class Admin extends User {
+
 }

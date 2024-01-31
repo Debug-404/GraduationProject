@@ -24,6 +24,10 @@
         insert into student(id, password, name, age, sex, phone, room_no)
             value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone}, #{roomNo})
     </insert>
+    <insert id="repair" parameterType="map">
+        insert into order(sid, room_no, sphone, rid, rphone, type)
+            value (#{sid}, #{roomNo}, #{sphone}, #{rid}, #{rphone}, #{type})
+    </insert>
 
     <delete id="deleteStudent" parameterType="String">
         delete

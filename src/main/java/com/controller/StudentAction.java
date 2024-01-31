@@ -4,7 +4,7 @@ import com.annotation.PassToken;
 import com.annotation.RequestLog;
 import com.model.Student;
 import com.model.User;
-import com.service.Impl.StudentServiceImpl;
+import com.service.StudentService;
 import com.utils.JwtUtils;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,7 @@ import java.util.Map;
 public class StudentAction {
 
     @Resource
-    StudentServiceImpl studentService;
+    StudentService studentService;
 
     @PassToken
     @RequestLog
@@ -33,7 +33,7 @@ public class StudentAction {
         } else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
-
+    @PassToken
     @RequestLog
     @RequestMapping("/register")
     public Result register(@RequestBody Map<String, Object> map) {
@@ -48,12 +48,19 @@ public class StudentAction {
         Student student = studentService.selectStudentById(map.get("id"));
         return Result.success(student);
     }
-    
+
     @RequestLog
     @PutMapping("/update")
     public Result update(@RequestBody Student student) {
         int i = studentService.updateStudent(student);
         return i == 1 ? Result.success("更新成功") : Result.error("更新失败");
+    }
+
+    @RequestLog
+    @PostMapping("/repair")
+    public Result Repair(@RequestBody Map<String, Object> map) {
+        studentService.repair(map);
+        return Result.success();
     }
 }
 

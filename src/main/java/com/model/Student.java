@@ -1,18 +1,15 @@
 package com.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 学生实体类
  */
 @Data
-public class Student {
-    String id;
-    String password;
-    String name;
+@ToString(callSuper = true)
+public class Student extends User {
     int age;
-    String sex;
-    String phone;
     String roomNo;
     int flag = 1;
 }

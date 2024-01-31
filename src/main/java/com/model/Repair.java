@@ -1,15 +1,14 @@
 package com.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 维修员实体类
  */
 @Data
-public class Repair {
-    String id;
-    String password;
-    String name;
-    String sex;
-    String phone;
+@ToString(callSuper = true)
+public class Repair extends User {
+    //接单数量
+    public static int sun = 0;
 }

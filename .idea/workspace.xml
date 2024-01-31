@@ -8,15 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/Impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/Impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/Impl/AdminServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/Impl/StudentServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" afterDir="false" />
     </list>
@@ -103,7 +110,23 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringBootVueApplication">
+    <configuration name="SpringBootVueApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringBootVue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.SpringBootVueApplicationTests" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootVueApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="SpringBootVue" />
@@ -112,6 +135,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringBootVueApplicationTests.test1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -191,7 +219,11 @@
       <workItem from="1706511104655" duration="794000" />
       <workItem from="1706512140445" duration="3981000" />
       <workItem from="1706516145454" duration="1197000" />
-      <workItem from="1706517411564" duration="1555000" />
+      <workItem from="1706517411564" duration="1621000" />
+      <workItem from="1706580237294" duration="11313000" />
+      <workItem from="1706608831532" duration="135000" />
+      <workItem from="1706662914653" duration="8453000" />
+      <workItem from="1706683346412" duration="1153000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -289,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706278753477</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="nest">
+      <option name="closed" value="true" />
+      <created>1706521819545</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706521819545</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

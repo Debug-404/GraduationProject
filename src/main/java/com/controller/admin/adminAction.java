@@ -2,7 +2,6 @@ package com.controller.admin;
 
 import com.annotation.RequestLog;
 import com.model.Student;
-import com.service.Impl.AdminServiceImpl;
 import com.service.StudentService;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +11,6 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/admin")
 public class adminAction {
-    @Resource
-    AdminServiceImpl adminService;
 
     @Resource
     StudentService studentService;
@@ -40,4 +37,11 @@ public class adminAction {
     }
 
 
+    @RequestLog
+    @PostMapping("/add")
+    public Result add(@RequestBody Student student) {
+        int i = studentService.addStudent(student);
+        System.out.println(i);
+        return Result.success();
+    }
 }

@@ -2,7 +2,6 @@ package com;
 
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.model.Student;
 import com.service.StudentService;
 import com.utils.JwtUtils;
 import org.junit.jupiter.api.Test;
@@ -30,9 +29,7 @@ class SpringBootVueApplicationTests {
 
     @Test
     public void test1() {
-        Student student = new Student();
-        int i = studentService.updateStudent(student);
-        System.out.println(i);
+        studentService.selectAll().forEach((System.out::println));
     }
 
 }

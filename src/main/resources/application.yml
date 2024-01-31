@@ -1,9 +1,9 @@
 spring:
   datasource:
     #    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/bishe?useUnicode=true&characterEncoding=utf-8&useSSL=true
-    username: root
-    password: root
+    url: jdbc:mysql://kaodigua.mysql.polardb.rds.aliyuncs.com:3306/bishe?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root_user
+    password: Pee1473690
     type: com.alibaba.druid.pool.DruidDataSource
 
 mybatis:
