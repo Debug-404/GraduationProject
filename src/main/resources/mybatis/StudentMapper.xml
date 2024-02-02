@@ -31,9 +31,10 @@
         insert into student(id, password, name, age, sex, phone, room_no)
             value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone}, #{roomNo})
     </insert>
+
     <insert id="repair" parameterType="map">
-        insert into order(sid, room_no, sphone, rid, rphone, type)
-            value (#{sid}, #{roomNo}, #{sphone}, #{rid}, #{rphone}, #{type})
+        insert into apply(sid, sname, room_no, sphone, type, details)
+            value (#{sid}, #{name}, #{roomNo}, #{phone}, #{type}, #{details})
     </insert>
 
     <delete id="deleteStudent" parameterType="String">
@@ -53,6 +54,7 @@
         where id = #{id}
           and flag != 0
     </update>
+
     <update id="updatePassword" parameterType="map">
         update student
         set password = #{password}

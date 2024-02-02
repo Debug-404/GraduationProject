@@ -1,7 +1,6 @@
 package com.service;
 
 import com.dao.StudentMapper;
-import com.model.Repair;
 import com.model.Student;
 import com.model.User;
 import org.springframework.stereotype.Service;
@@ -60,8 +59,6 @@ public class StudentService {
 
     public void repair(Map<String, Object> map) {
         // 姓名,地址 address，电话，类型,详情
-        Repair repair = new Repair();
-        System.out.println(map.toString());
         studentMapper.repair(map);
         System.out.println("报修");
     }

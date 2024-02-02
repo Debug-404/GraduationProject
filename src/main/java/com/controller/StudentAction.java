@@ -60,7 +60,7 @@ public class StudentAction {
     @PostMapping("/repair")
     public Result Repair(@RequestBody Map<String, Object> map) {
         studentService.repair(map);
-        return Result.success();
+        return Result.success("报修成功，后续维修员会与您联系");
     }
 }
 
