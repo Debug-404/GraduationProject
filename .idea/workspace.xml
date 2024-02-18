@@ -8,10 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b27ceb7f-7650-4a11-87ae-ea15eed0d975.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/student/StudentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,13 +130,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-1.8.0_392-corretto-1.8.0_392-3183f394aec4-cb300fc7" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -216,6 +211,12 @@
       <workItem from="1706691513571" duration="2805000" />
       <workItem from="1706695223448" duration="25000" />
       <workItem from="1706837970255" duration="5172000" />
+      <workItem from="1707311734031" duration="186000" />
+      <workItem from="1708053625425" duration="26000" />
+      <workItem from="1708094267516" duration="38000" />
+      <workItem from="1708240752511" duration="1910000" />
+      <workItem from="1708263596387" duration="1165000" />
+      <workItem from="1708267578712" duration="7304000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />

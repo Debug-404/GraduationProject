@@ -1,4 +1,4 @@
-package com.controller;
+package com.controller.student;
 
 import com.annotation.PassToken;
 import com.annotation.RequestLog;
@@ -59,6 +59,7 @@ public class StudentAction {
     @RequestLog
     @PostMapping("/repair")
     public Result Repair(@RequestBody Map<String, Object> map) {
+        System.out.println(map.toString());
         studentService.repair(map);
         return Result.success("报修成功，后续维修员会与您联系");
     }
