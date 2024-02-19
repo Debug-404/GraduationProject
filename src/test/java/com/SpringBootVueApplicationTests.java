@@ -2,6 +2,7 @@ package com;
 
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.service.AdminService;
 import com.service.StudentService;
 import com.utils.JwtUtils;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,9 @@ class SpringBootVueApplicationTests {
     @Resource
     StudentService studentService;
 
+    @Resource
+    AdminService adminService;
+
     @Test
     public void contextLoads() {
         Map<String, String> map = new HashMap<>();
@@ -29,7 +33,7 @@ class SpringBootVueApplicationTests {
 
     @Test
     public void test1() {
-        studentService.findAll().forEach((System.out::println));
+        System.out.println(adminService.findByLimit(1, 10));
     }
 
 }

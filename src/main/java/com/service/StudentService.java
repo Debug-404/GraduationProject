@@ -58,8 +58,6 @@ public class StudentService {
     }
 
     public void repair(Map<String, Object> map) {
-        // 姓名,地址 address，电话，类型,详情
         studentMapper.repair(map);
-        System.out.println("报修");
     }
 }

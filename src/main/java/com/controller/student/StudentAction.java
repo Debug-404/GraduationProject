@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/stu")
 public class StudentAction {
 
     @Resource
@@ -40,7 +41,7 @@ public class StudentAction {
         System.out.println(map.toString());
         return Result.success("注册成功");
     }
-
+    
 
     @RequestLog
     @PostMapping("/getStudent")
@@ -59,7 +60,6 @@ public class StudentAction {
     @RequestLog
     @PostMapping("/repair")
     public Result Repair(@RequestBody Map<String, Object> map) {
-        System.out.println(map.toString());
         studentService.repair(map);
         return Result.success("报修成功，后续维修员会与您联系");
     }
