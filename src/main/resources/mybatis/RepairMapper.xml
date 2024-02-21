@@ -5,13 +5,13 @@
 <mapper namespace="com.dao.RepairMapper">
 
 
-    <select id="selectRepairById" resultType="com.model.Repair">
+    <select id="selectRepairById" resultType="com.model.Worker">
         select id, password, name, sex, phone
         from repair
         where id = #{id}
         limit 1
     </select>
-    <select id="findAll" resultType="com.model.Repair">
+    <select id="findAll" resultType="com.model.Worker">
         select id, password, name, sex, phone
         from repair
     </select>
