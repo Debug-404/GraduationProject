@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DormBuildMapper">
+
+    <insert id="addNewBuilding" parameterType="com.model.DormBuild">
+        insert into dorm_build(dormbuild_id, dormbuild_name, dormbuild_detail)
+            value (#{dormBuildId}, #{dormBuildName}, #{dormBuildDetail})
+    </insert>
+    <update id="updateNewBuilding" parameterType="com.model.DormBuild">
+        update dorm_build
+        set dormbuild_id     = #{dormBuildId},
+            dormbuild_name   = #{dormBuildName},
+            dormbuild_detail = #{dormBuildDetail}
+        where id = #{id}
+    </update>
+    <delete id="deleteBuilding" parameterType="java.lang.Integer">
+        delete
+        from dorm_build
+        where id = #{id}
+    </delete>
+    <select id="getBuildingId" resultType="com.model.DormBuild">
+        select id, dormbuild_id, dormbuild_name, dormbuild_detail
+        from dorm_build
+    </select>
+</mapper>

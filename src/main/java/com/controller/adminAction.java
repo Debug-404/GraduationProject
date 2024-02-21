@@ -1,12 +1,10 @@
-package com.controller.admin;
+package com.controller;
 
 import com.annotation.PassToken;
 import com.annotation.RequestLog;
 import com.model.Admin;
-import com.model.Student;
 import com.model.User;
 import com.service.AdminService;
-import com.service.StudentService;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,11 +16,11 @@ import java.util.Map;
 public class adminAction {
 
     @Resource
-    StudentService studentService;
-
-    @Resource
     AdminService adminService;
 
+    /**
+     * 管理员登录
+     */
     @PassToken
     @RequestLog
     @RequestMapping(value = "/login")
@@ -33,35 +31,15 @@ public class adminAction {
         } else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
+    /**
+     * 管理员信息更新
+     */
+    @PutMapping("/update")
     @RequestLog
-    @PostMapping("/getStudent/{id}")
-    public Result getStudent(@PathVariable String id) {
-        Student student = studentService.selectStudentById(id);
-        return Result.success(student);
+    public Result update(@RequestBody Admin admin) {
+        return adminService.updateAdmin(admin) == 1 ? Result.success("删除成功") : Result.error("删除失败");
     }
 
-    @RequestLog
-    @DeleteMapping("/delete")
-    public Result delete(@RequestBody String id) {
-        int i = studentService.deleteStudent(id);
-        return i == 1 ? Result.success("删除成功") : Result.error("删除失败");
-    }
-
-
-    @RequestLog
-    @PostMapping("/getAll")
-    public Result getAll() {
-        return Result.success(studentService.findAll());
-    }
-
-
-    @RequestLog
-    @PostMapping("/add")
-    public Result add(@RequestBody Student student) {
-        int i = studentService.addStudent(student);
-        System.out.println(i);
-        return Result.success();
-    }
 
     @RequestLog
     @PostMapping("/intoNotice")
@@ -75,5 +53,4 @@ public class adminAction {
     public Result getNotice(@PathVariable int currentPage) {
         return Result.success(adminService.findByLimit(currentPage, 5));
     }
-
 }

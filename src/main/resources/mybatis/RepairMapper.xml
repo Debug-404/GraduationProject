@@ -2,17 +2,30 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dao.RepairMapper">
-
-
-    <select id="selectRepairById" resultType="com.model.Repair">
-        select id, password, name, sex, phone
+<mapper namespace="com.mapper.RepairMapper">
+    <insert id="addNewOrder"></insert>
+    <update id="updateNewOrder" parameterType="com.model.Repair">
+        update repair
+        set order_id         = #{id},
+            sid              = #{Sid},
+            sname            =#{sName},
+            sphone           = #{sPhone},
+            dormbuild_id     = #{dormBuildId},
+            dormroom_id      = #{dormRoomId},
+            rid              = #{repairer},
+            rphone           = #{rPhone},
+            type             = #{type},
+            content          = #{content},
+            state            = #{state},
+            order_finishtime = #{orderFinishTime}
+    </update>
+    <delete id="deleteOrder" parameterType="java.lang.Integer">
+        delete
         from repair
-        where id = #{id}
-        limit 1
-    </select>
-    <select id="findAll" resultType="com.model.Repair">
-        select id, password, name, sex, phone
+        where order_id = #{id}
+    </delete>
+    <select id="showOrderNum" resultType="java.lang.Integer">
+        select count(order_id)
         from repair
     </select>
 </mapper>

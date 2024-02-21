@@ -2,34 +2,40 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dao.StudentMapper">
+<mapper namespace="com.mapper.StudentMapper">
 
     <resultMap id="StudentMap" type="com.model.Student">
-        <result property="roomNo" column="room_no"/>
+        <result property="dormBuildId" column="dormbuild_id"/>
+        <result property="dormRoomId" column="dormroom_id"/>
     </resultMap>
 
     <select id="findAll" resultMap="StudentMap">
-        select id, password, name, age, sex, phone, room_no
+        select id, password, name, age, sex, phone, dormroom_id
         from student
         where flag != 0
     </select>
 
     <select id="findByLimit" resultMap="StudentMap" resultType="map">
-        select id, password, name, age, sex, phone, room_no
+        select id, password, name, age, sex, phone, dormroom_id
         from student
         limit #{startIndex},#{pageSize}
     </select>
 
     <select id="selectStudentById" resultMap="StudentMap">
-        select id, password, name, age, sex, phone, room_no
+        select id, password, name, age, sex, phone, dormroom_id
         from student
         where id = #{id}
           and flag != 0
     </select>
+    <select id="stuNum" resultType="java.lang.Integer">
+        select count(*)
+        from student
+        where flag != 0
+    </select>
 
     <insert id="addStudent" parameterType="com.model.Student">
-        insert into student(id, password, name, age, sex, phone, room_no)
-            value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone}, #{roomNo})
+        insert into student(id, password, name, age, sex, phone, dormroom_id)
+            value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone}, #{dormroom_id})
     </insert>
 
     <insert id="repair" parameterType="map">
@@ -46,11 +52,11 @@
 
     <update id="updateStudent" parameterType="com.model.Student">
         update student
-        SET name    = #{name},
-            age     = #{age},
-            sex     =#{sex},
-            phone   = #{phone},
-            room_no = #{roomNo}
+        SET name        = #{name},
+            age         = #{age},
+            sex         =#{sex},
+            phone       = #{phone},
+            dormroom_id = #{dormroom_id}
         where id = #{id}
           and flag != 0
     </update>

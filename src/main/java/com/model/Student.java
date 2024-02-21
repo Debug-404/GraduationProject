@@ -9,7 +9,7 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public class Student extends User {
-    int age;
-    String roomNo;
+    String dormBuildId;
+    String dormRoomId;
     int flag = 1;
 }

@@ -1,4 +1,4 @@
-package com.dao;
+package com.mapper;
 
 import com.model.Student;
 import org.apache.ibatis.annotations.Mapper;
@@ -12,6 +12,8 @@ import java.util.Map;
 public interface StudentMapper {
     //获取全部学生信息
     List<Student> findAll();
+
+    int stuNum();
 
     //分页查询
     List<String> findByLimit(Map<String, Object> map);

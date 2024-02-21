@@ -8,14 +8,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
+      <change afterPath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormBuildAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/NoticeAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/RepairController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mapper/DormBuildMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mapper/DormRoomMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NoticeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mapper/WorkerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/DormBuild.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/DormRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/DormBuildService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/NoticeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/WorkerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/UID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/DormBuildMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/DormRoomMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/NoticeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/WorkerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/student/StudentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/student/StudentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/SpringBootVueApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/annotation/PassToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/annotation/RequestLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/annotation/aspect/LogAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/controller/admin/adminAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/controller/student/StudentAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/controller/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/dao/AdminMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/dao/RepairMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/dao/StudentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/exception/interceptor/TokenInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/model/Repair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/service/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/service/RepairService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/utils/JwtUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/utils/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/resources/mybatis/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/src/main/resources/mybatis/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/resources/mybatis/RepairMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/src/main/resources/mybatis/RepairMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/test/java/com/SpringBootVueApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/admin/adminAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/adminAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/student/StudentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/RepairMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/RepairMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/RepairService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/RepairService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/RepairMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/RepairMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +82,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTTP Public Environment File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTTP Public Environment File" />
       </list>
     </option>
   </component>
@@ -36,7 +92,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bin" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.76/tomcat-embed-core-9.0.76-sources.jar!/javax/servlet/http/HttpServlet.java" root0="SKIP_INSPECTION" />
@@ -90,7 +146,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;cn.yiiguxing.plugin.translate&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -102,7 +158,16 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.SpringBootVueApplication">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.controller" />
+      <recent name="com.service" />
+      <recent name="com.mapper" />
+      <recent name="com.utils" />
+      <recent name="com.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SpringBootVueApplicationTests.test1">
     <configuration name="SpringBootVueApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringBootVue" />
       <extension name="coverage">
@@ -223,7 +288,19 @@
       <workItem from="1708275485461" duration="65000" />
       <workItem from="1708339975346" duration="99000" />
       <workItem from="1708344452245" duration="57000" />
-      <workItem from="1708344524240" duration="12041000" />
+      <workItem from="1708344524240" duration="12130000" />
+      <workItem from="1708397762130" duration="618000" />
+      <workItem from="1708405156079" duration="38000" />
+      <workItem from="1708405204627" duration="2108000" />
+      <workItem from="1708434933862" duration="375000" />
+      <workItem from="1708437016761" duration="153000" />
+      <workItem from="1708438652289" duration="1000" />
+      <workItem from="1708440773467" duration="208000" />
+      <workItem from="1708488414190" duration="7197000" />
+      <workItem from="1708506650775" duration="8000" />
+      <workItem from="1708506667358" duration="4283000" />
+      <workItem from="1708522613073" duration="56000" />
+      <workItem from="1708531129923" duration="2297000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -353,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708275497525</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="nest">
+      <option name="closed" value="true" />
+      <created>1708359842949</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708359842949</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

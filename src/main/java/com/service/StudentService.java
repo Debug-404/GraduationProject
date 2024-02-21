@@ -1,6 +1,6 @@
 package com.service;
 
-import com.dao.StudentMapper;
+import com.mapper.StudentMapper;
 import com.model.Student;
 import com.model.User;
 import org.springframework.stereotype.Service;
@@ -59,5 +59,9 @@ public class StudentService {
 
     public void repair(Map<String, Object> map) {
         studentMapper.repair(map);
+    }
+
+    public int stuNum() {
+        return studentMapper.stuNum();
     }
 }

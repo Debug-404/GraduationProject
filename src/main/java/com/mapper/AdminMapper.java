@@ -1,4 +1,4 @@
-package com.dao;
+package com.mapper;
 
 import com.model.Admin;
 import org.apache.ibatis.annotations.MapKey;
@@ -12,6 +12,8 @@ import java.util.Map;
 @Repository
 public interface AdminMapper {
     Admin selectAdminById(String id);
+
+    int updateAdmin(Admin admin);
 
     //发布告示
     int intoNotice(Map<String, Object> map);
