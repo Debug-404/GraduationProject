@@ -8,16 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/annotation/PassToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/annotation/RequestLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exception/interceptor/TokenInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +242,8 @@
       <workItem from="1708533617360" duration="478000" />
       <workItem from="1708534100900" duration="8000" />
       <workItem from="1708534202421" duration="20000" />
-      <workItem from="1708534248612" duration="210000" />
+      <workItem from="1708534248612" duration="355000" />
+      <workItem from="1708534636429" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -396,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708533520557</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="nest">
+      <option name="closed" value="true" />
+      <created>1708534472830</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708534472830</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
