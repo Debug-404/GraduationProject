@@ -8,15 +8,15 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DormRoomMapper {
     //统计没有住满的宿舍数量
-    public int notFullRoom();
+    int notFullRoom();
 
-    //新增房间
+    //新增宿舍
     int addNewRoom(DormRoom dormRoom);
 
-    //更新房间信息
+    //更新宿舍信息
     int updateNewRoom(DormRoom dormRoom);
 
-    //删除房间信息
+    //删除宿舍信息
     int deleteRoom(Integer dormRoomId);
 
     //主页 住宿人数
