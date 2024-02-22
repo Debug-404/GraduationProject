@@ -15,7 +15,7 @@
         where flag != 0
     </select>
 
-    <select id="findByLimit" resultMap="StudentMap" resultType="map">
+    <select id="findByLimit" resultMap="StudentMap" parameterType="map">
         select id, password, name, age, sex, phone, dormroom_id
         from student
         limit #{startIndex},#{pageSize}

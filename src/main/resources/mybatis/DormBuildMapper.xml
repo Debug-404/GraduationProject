@@ -24,4 +24,9 @@
         select id, dormbuild_id, dormbuild_name, dormbuild_detail
         from dorm_build
     </select>
+    <select id="find" resultType="com.model.DormBuild" parameterType="map">
+        select id, dormbuild_id, dormbuild_name, dormbuild_detail
+        from dorm_build
+        limit #{startIndex},#{pageSize}
+    </select>
 </mapper>

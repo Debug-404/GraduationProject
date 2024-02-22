@@ -8,13 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/WorkerAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/DormRoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/DormRoomMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/DormRoomMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/DormRoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/DormRoomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NoticeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NoticeAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/DormBuildMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/DormBuildMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NoticeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/DormBuildMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/DormBuildMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/NoticeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +252,12 @@
       <workItem from="1708534202421" duration="20000" />
       <workItem from="1708534248612" duration="355000" />
       <workItem from="1708534636429" duration="919000" />
-      <workItem from="1708535587886" duration="1000" />
+      <workItem from="1708535587886" duration="20000" />
+      <workItem from="1708581432762" duration="3209000" />
+      <workItem from="1708600772181" duration="839000" />
+      <workItem from="1708609970485" duration="276000" />
+      <workItem from="1708610275639" duration="40000" />
+      <workItem from="1708618068223" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -411,7 +419,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708534744158</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="nest">
+      <option name="closed" value="true" />
+      <created>1708535600609</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708535600609</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

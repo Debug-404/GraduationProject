@@ -24,4 +24,10 @@
         select id, title, text, time
         from notice
     </select>
+    <select id="find" resultType="com.model.Notice" parameterType="map">
+        select *
+        from notice
+        where title like '%#{search}%'
+        limit #{startIndex},#{pageSize}
+    </select>
 </mapper>

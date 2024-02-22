@@ -5,7 +5,9 @@ import com.model.Notice;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class NoticeService {
@@ -23,6 +25,16 @@ public class NoticeService {
         return noticeMapper.addNewNotice(notice);
     }
 
+    /**
+     * 公告查找
+     */
+    public List<Notice> find(Integer startIndex, Integer pageSize, String search) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("startIndex", startIndex);
+        map.put("pageSize", pageSize);
+        map.put("search", search);
+        return noticeMapper.find(map);
+    }
 
     /**
      * 公告更新

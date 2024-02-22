@@ -16,6 +16,18 @@ public class NoticeAction {
     NoticeService noticeService;
 
     /**
+     * 公告查找
+     */
+    @GetMapping("/find")
+    public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
+                           @RequestParam(defaultValue = "10") Integer pageSize,
+                           @RequestParam(defaultValue = "") String search) {
+        List<Notice> list = noticeService.find(pageNum, pageSize, search);
+        return Result.success(list);
+
+    }
+
+    /**
      * 公告添加
      */
     @PostMapping("/add")
@@ -41,7 +53,6 @@ public class NoticeAction {
         int i = noticeService.deleteNotice(id);
         return i == 1 ? Result.success("删除成功") : Result.error("删除失败");
     }
-
 
     /**
      * 首页公告展示

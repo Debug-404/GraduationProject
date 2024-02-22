@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -14,7 +15,7 @@ public interface DormBuildMapper {
     int addNewBuilding(DormBuild dormBuild);
 
     //查询楼宇
-    //Page find(Integer pageNum, Integer pageSize, String search);
+    List<DormBuild> find(Map<String, Object> map);
 
     //更新楼宇信息
     int updateNewBuilding(DormBuild dormBuild);
