@@ -22,15 +22,23 @@ public class StudentService {
     }
 
     //page
-    public List<String> findByLimit(int currentPage, int pageSize) {
+    public List<Student> findByLimit(int pageNum, int pageSize) {
         //currentPage 第几页
         //pageSize 每页显示几个
         Map<String, Object> map = new HashMap<>();
-        map.put("startIndex", (currentPage - 1) * pageSize);
+        map.put("startIndex", (pageNum - 1) * pageSize);
         map.put("pageSize", pageSize);
         return studentMapper.findByLimit(map);
     }
 
+    //查询学生
+    public List<Student> find(Integer pageNum, Integer pageSize, String search) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("startIndex", (pageNum - 1) * pageSize);
+        map.put("pageSize", pageSize);
+        map.put("search", "%" + search + "%");
+        return studentMapper.find(map);
+    }
 
     public Student selectStudentById(String id) {
         return studentMapper.selectStudentById(id);

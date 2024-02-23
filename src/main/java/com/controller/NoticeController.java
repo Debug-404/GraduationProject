@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/notice")
-public class NoticeAction {
+public class NoticeController {
 
     @Resource
     NoticeService noticeService;

@@ -8,7 +8,9 @@
         <result property="dormBuildId" column="dormbuild_id"/>
         <result property="dormRoomId" column="dormroom_id"/>
     </resultMap>
-
+    <resultMap id="cont" type="java.lang.Integer">
+        <result column="count"/>
+    </resultMap>
     <select id="findAll" resultMap="StudentMap">
         select id, password, name, age, sex, phone, dormroom_id
         from student
@@ -32,6 +34,21 @@
         from student
         where flag != 0
     </select>
+    <select id="find" resultMap="StudentMap" parameterType="map">
+        select SQL_CALC_FOUND_ROWS id,
+                                   password,
+                                   name,
+                                   age,
+                                   sex,
+                                   phone,
+                                   dormbuild_id,
+                                   dormroom_id
+        from student
+        where name like #{search}
+          and flag != 0
+        limit #{startIndex},#{pageSize};
+        select FOUND_ROWS();
+    </select>
 
     <insert id="addStudent" parameterType="com.model.Student">
         insert into student(id, password, name, age, sex, phone, dormroom_id)
@@ -43,12 +60,11 @@
             value (#{sid}, #{name}, #{region}, #{roomNo}, #{phone}, #{type}, #{details})
     </insert>
 
-    <delete id="deleteStudent" parameterType="String">
-        delete
-        from student
+    <update id="deleteStudent" parameterType="String">
+        update student
+        set flag=0
         where id = #{id}
-          and flag != 0
-    </delete>
+    </update>
 
     <update id="updateStudent" parameterType="com.model.Student">
         update student
@@ -58,13 +74,11 @@
             phone       = #{phone},
             dormroom_id = #{dormroom_id}
         where id = #{id}
-          and flag != 0
     </update>
 
     <update id="updatePassword" parameterType="map">
         update student
         set password = #{password}
         where id = #{id}
-          and flag != 0
     </update>
 </mapper>

@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/room")
-public class DormRoomAction {
+public class DormRoomController {
     @Resource
     DormRoomMapper dormRoomMapper;
 

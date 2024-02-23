@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/admin")
-public class adminAction {
+public class adminController {
 
     @Resource
     AdminService adminService;

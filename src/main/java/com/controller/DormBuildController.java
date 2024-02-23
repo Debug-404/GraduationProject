@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/building")
-public class DormBuildAction {
+public class DormBuildController {
     @Resource
     DormBuildService dormBuildService;
 

@@ -8,16 +8,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SpringBootVueApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/DataRuleRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/ListEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/PageParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NoticeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NoticeAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/DormBuildMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/DormBuildMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NoticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/NoticeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/DormBuildMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/DormBuildMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/NoticeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DormBuildAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormBuildController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NoticeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/StudentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/WorkerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/WorkerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/adminAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/SpringBootVueApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,6 +266,10 @@
       <workItem from="1708609970485" duration="276000" />
       <workItem from="1708610275639" duration="40000" />
       <workItem from="1708618068223" duration="13000" />
+      <workItem from="1708621395581" duration="74000" />
+      <workItem from="1708664297562" duration="6000" />
+      <workItem from="1708664625733" duration="3806000" />
+      <workItem from="1708697217563" duration="8389000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -427,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708535600609</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="nest">
+      <option name="closed" value="true" />
+      <created>1708621461162</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708621461163</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

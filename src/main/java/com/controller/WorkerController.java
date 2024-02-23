@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/worker")
-public class WorkerAction {
+public class WorkerController {
 
     @Resource
     WorkerService workerService;

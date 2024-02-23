@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/stu")
-public class StudentAction {
+public class StudentController {
 
     @Resource
     StudentService studentService;
@@ -54,6 +55,24 @@ public class StudentAction {
     }
 
     /**
+     * 查找学生信息
+     */
+    @GetMapping("/find")
+    public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
+                           @RequestParam(defaultValue = "10") Integer pageSize,
+                           @RequestParam(defaultValue = "") String search) {
+        List<Student> list = studentService.find(pageNum, pageSize, search);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("list", list);
+        map.put("total", studentService.stuNum());
+        if (list != null) {
+            return Result.success(map);
+        } else {
+            return Result.error("查询失败");
+        }
+    }
+
+    /**
      * 添加学生信息
      */
     @RequestLog
@@ -67,8 +86,8 @@ public class StudentAction {
      * 删除学生信息
      */
     @RequestLog
-    @DeleteMapping("/delete")
-    public Result delete(@RequestBody String id) {
+    @DeleteMapping("/delete/{id}")
+    public Result delete(@PathVariable String id) {
         int i = studentService.deleteStudent(id);
         return i == 1 ? Result.success("删除成功") : Result.error("删除失败");
     }
@@ -87,7 +106,7 @@ public class StudentAction {
      * 获取全部学生信息
      */
     @RequestLog
-    @PostMapping("/getAll")
+    @PostMapping("/find")
     public Result getAll() {
         return Result.success(studentService.findAll());
     }

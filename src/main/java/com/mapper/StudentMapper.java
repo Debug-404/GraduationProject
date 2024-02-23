@@ -16,7 +16,10 @@ public interface StudentMapper {
     int stuNum();
 
     //分页查询
-    List<String> findByLimit(Map<String, Object> map);
+    List<Student> findByLimit(Map<String, Object> map);
+
+    //查询学生
+    List<Student> find(Map<String, Object> map);
 
     //根据学号查询单个学生信息
     Student selectStudentById(String id);

@@ -2,6 +2,7 @@ package com;
 
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.model.Student;
 import com.service.AdminService;
 import com.service.NoticeService;
 import com.service.StudentService;
@@ -11,8 +12,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @SpringBootTest
@@ -41,7 +42,8 @@ class SpringBootVueApplicationTests {
 
     @Test
     public void test1() {
-        System.out.println(Arrays.toString(workerService.findAll().toArray()));
+        List<Student> list = studentService.find(1, 10, "%%");
+        System.out.println(list);
     }
 
 }
