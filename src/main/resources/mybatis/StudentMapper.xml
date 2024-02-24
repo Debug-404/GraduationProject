@@ -8,9 +8,6 @@
         <result property="dormBuildId" column="dormbuild_id"/>
         <result property="dormRoomId" column="dormroom_id"/>
     </resultMap>
-    <resultMap id="cont" type="java.lang.Integer">
-        <result column="count"/>
-    </resultMap>
     <select id="findAll" resultMap="StudentMap">
         select id, password, name, age, sex, phone, dormroom_id
         from student
@@ -20,7 +17,7 @@
     <select id="findByLimit" resultMap="StudentMap" parameterType="map">
         select id, password, name, age, sex, phone, dormroom_id
         from student
-        limit #{startIndex},#{pageSize}
+        where flag != 0
     </select>
 
     <select id="selectStudentById" resultMap="StudentMap">
@@ -35,24 +32,22 @@
         where flag != 0
     </select>
     <select id="find" resultMap="StudentMap" parameterType="map">
-        select SQL_CALC_FOUND_ROWS id,
-                                   password,
-                                   name,
-                                   age,
-                                   sex,
-                                   phone,
-                                   dormbuild_id,
-                                   dormroom_id
+        select id,
+               password,
+               name,
+               age,
+               sex,
+               phone,
+               dormbuild_id,
+               dormroom_id
         from student
-        where name like #{search}
+        where name like concat('%', #{search}, '%')
           and flag != 0
-        limit #{startIndex},#{pageSize};
-        select FOUND_ROWS();
     </select>
 
     <insert id="addStudent" parameterType="com.model.Student">
-        insert into student(id, password, name, age, sex, phone, dormroom_id)
-            value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone}, #{dormroom_id})
+        insert into student(id, password, name, age, sex, phone)
+            value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone})
     </insert>
 
     <insert id="repair" parameterType="map">
@@ -68,11 +63,11 @@
 
     <update id="updateStudent" parameterType="com.model.Student">
         update student
-        SET name        = #{name},
-            age         = #{age},
-            sex         =#{sex},
-            phone       = #{phone},
-            dormroom_id = #{dormroom_id}
+        SET name     = #{name},
+            password = #{password},
+            age      = #{age},
+            sex      =#{sex},
+            phone    = #{phone}
         where id = #{id}
     </update>
 

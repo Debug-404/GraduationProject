@@ -1,5 +1,7 @@
 package com.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.mapper.DormBuildMapper;
 import com.model.DormBuild;
 import org.springframework.stereotype.Service;
@@ -29,5 +31,11 @@ public class DormBuildService {
 
     public List<DormBuild> getBuildingId() {
         return dormBuildMapper.getBuildingId();
+    }
+
+    public PageInfo<DormBuild> find(Integer pageNum, Integer pageSize, String search) {
+        PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
+        List<DormBuild> list = dormBuildMapper.find(search);
+        return new PageInfo<>(list);
     }
 }

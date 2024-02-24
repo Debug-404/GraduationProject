@@ -4,6 +4,8 @@ import com.model.DormRoom;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface DormRoomMapper {
@@ -25,4 +27,5 @@ public interface DormRoomMapper {
     //获取每栋宿舍学生总人数
     Long getEachBuildingStuNum(int dormBuildId);
 
+    List<DormRoom> find(String search);
 }

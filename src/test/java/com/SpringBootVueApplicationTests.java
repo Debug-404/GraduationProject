@@ -2,7 +2,9 @@ package com;
 
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.model.Student;
+import com.mapper.DormRoomMapper;
+import com.mapper.StudentMapper;
+import com.model.DormRoom;
 import com.service.AdminService;
 import com.service.NoticeService;
 import com.service.StudentService;
@@ -21,6 +23,9 @@ class SpringBootVueApplicationTests {
 
     @Resource
     StudentService studentService;
+
+    @Resource
+    StudentMapper studentMapper;
     @Resource
     NoticeService noticeService;
 
@@ -29,6 +34,9 @@ class SpringBootVueApplicationTests {
 
     @Resource
     WorkerService workerService;
+
+    @Resource
+    DormRoomMapper dormRoomMapper;
 
     @Test
     public void contextLoads() {
@@ -42,8 +50,8 @@ class SpringBootVueApplicationTests {
 
     @Test
     public void test1() {
-        List<Student> list = studentService.find(1, 10, "%%");
-        System.out.println(list);
+        List<DormRoom> list = dormRoomMapper.find("11");
+        list.forEach(System.out::println);
     }
 
 }

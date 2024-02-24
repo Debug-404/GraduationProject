@@ -1,12 +1,13 @@
 package com.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.mapper.StudentMapper;
 import com.model.Student;
 import com.model.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,23 +22,12 @@ public class StudentService {
         return studentMapper.findAll();
     }
 
-    //page
-    public List<Student> findByLimit(int pageNum, int pageSize) {
-        //currentPage 第几页
-        //pageSize 每页显示几个
-        Map<String, Object> map = new HashMap<>();
-        map.put("startIndex", (pageNum - 1) * pageSize);
-        map.put("pageSize", pageSize);
-        return studentMapper.findByLimit(map);
-    }
 
     //查询学生
-    public List<Student> find(Integer pageNum, Integer pageSize, String search) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("startIndex", (pageNum - 1) * pageSize);
-        map.put("pageSize", pageSize);
-        map.put("search", "%" + search + "%");
-        return studentMapper.find(map);
+    public PageInfo<Student> find(Integer pageNum, Integer pageSize, String search) {
+        PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
+        List<Student> list = studentMapper.find(search);
+        return new PageInfo<>(list);
     }
 
     public Student selectStudentById(String id) {

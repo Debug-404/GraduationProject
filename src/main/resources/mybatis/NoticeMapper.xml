@@ -24,10 +24,9 @@
         select id, title, text, time
         from notice
     </select>
-    <select id="find" resultType="com.model.Notice" parameterType="map">
-        select *
+    <select id="find" resultType="com.model.Notice" parameterType="java.lang.String">
+        select id, title, text, time
         from notice
-        where title like '%#{search}%'
-        limit #{startIndex},#{pageSize}
+        where title like concat('%', #{search}, '%')
     </select>
 </mapper>

@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 @Repository
@@ -14,7 +13,7 @@ public interface NoticeMapper {
     int addNewNotice(Notice notice);
 
     //查询
-    List<Notice> find(Map<String, Object> map);
+    List<Notice> find(String search);
 
     //更新通知信息
     int updateNewNotice(Notice notice);

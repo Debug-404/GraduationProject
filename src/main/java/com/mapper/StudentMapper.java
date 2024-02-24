@@ -13,13 +13,11 @@ public interface StudentMapper {
     //获取全部学生信息
     List<Student> findAll();
 
+    //学生数量
     int stuNum();
 
-    //分页查询
-    List<Student> findByLimit(Map<String, Object> map);
-
     //查询学生
-    List<Student> find(Map<String, Object> map);
+    List<Student> find(String search);
 
     //根据学号查询单个学生信息
     Student selectStudentById(String id);

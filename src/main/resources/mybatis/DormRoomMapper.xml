@@ -3,11 +3,45 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mapper.DormRoomMapper">
-    <insert id="addNewRoom"></insert>
-    <update id="updateNewRoom"></update>
+    <resultMap id="RoomMap" type="com.model.DormRoom">
+        <result property="dormRoomId" column="dormroom_id"/>
+        <result property="dormBuildId" column="dormbuild_id"/>
+        <result property="floorNum" column="floor_num"/>
+        <result property="maxCapacity" column="max_capacity"/>
+        <result property="currentCapacity" column="current_capacity"/>
+    </resultMap>
+
+    <insert id="addNewRoom" parameterType="com.model.DormRoom">
+        insert into dorm_room(dormroom_id, dormbuild_id, floor_num, max_capacity, current_capacity)
+            VALUE (#{dormRoomId}, #{dormBuildId}, #{floorNum}, #{maxCapacity}, #{currentCapacity})
+    </insert>
+    <update id="updateNewRoom" parameterType="com.model.DormRoom">
+        update dorm_room
+        set dormbuild_id     = #{dormBuildId},
+            floor_num        = #{floorNum},
+            max_capacity     =#{maxCapacity},
+            current_capacity = #{currentCapacity}
+        where dormroom_id = #{dormRoomId};
+    </update>
     <delete id="deleteRoom"></delete>
 
-    <select id="notFullRoom" resultType="java.lang.Integer"></select>
-    <select id="selectHaveRoomStuNum" resultType="java.lang.Long"></select>
-    <select id="getEachBuildingStuNum" resultType="java.lang.Long"></select>
+    <select id="notFullRoom" resultType="java.lang.Integer">
+        select count(*)
+        from dorm_room
+        where current_capacity = 0
+    </select>
+    <select id="selectHaveRoomStuNum" resultType="java.lang.Long">
+        select count(*)
+        from dorm_room
+    </select>
+    <select id="getEachBuildingStuNum" parameterType="int" resultType="java.lang.Long">
+        select count(*)
+        from dorm_room
+        where dormbuild_id = #{dormBuildId}
+    </select>
+    <select id="find" resultMap="RoomMap" parameterType="java.lang.String">
+        select dormroom_id, dormbuild_id, floor_num, max_capacity, current_capacity
+        from dorm_room
+        where cast(dormroom_id as char) like concat('%', #{search}, '%')
+    </select>
 </mapper>

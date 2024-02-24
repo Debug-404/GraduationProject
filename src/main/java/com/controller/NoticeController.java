@@ -1,5 +1,7 @@
 package com.controller;
 
+import com.annotation.RequestLog;
+import com.github.pagehelper.PageInfo;
 import com.model.Notice;
 import com.service.NoticeService;
 import com.utils.Result;
@@ -18,18 +20,20 @@ public class NoticeController {
     /**
      * 公告查找
      */
+    @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
                            @RequestParam(defaultValue = "10") Integer pageSize,
                            @RequestParam(defaultValue = "") String search) {
-        List<Notice> list = noticeService.find(pageNum, pageSize, search);
-        return Result.success(list);
+        PageInfo<Notice> pageInfo = noticeService.find(pageNum, pageSize, search);
+        return Result.success(pageInfo);
 
     }
 
     /**
      * 公告添加
      */
+    @RequestLog
     @PostMapping("/add")
     public Result add(@RequestBody Notice notice) {
         int i = noticeService.addNewNotice(notice);
@@ -39,6 +43,7 @@ public class NoticeController {
     /**
      * 公告更新
      */
+    @RequestLog
     @PutMapping("/update")
     public Result update(@RequestBody Notice notice) {
         int i = noticeService.updateNewNotice(notice);
@@ -48,6 +53,7 @@ public class NoticeController {
     /**
      * 公告删除
      */
+    @RequestLog
     @DeleteMapping("/delete/{id}")
     public Result delete(@PathVariable Integer id) {
         int i = noticeService.deleteNotice(id);
@@ -57,6 +63,7 @@ public class NoticeController {
     /**
      * 首页公告展示
      */
+    @RequestLog
     @GetMapping("/homePageNotice")
     public Result homePageNotice() {
         List<Notice> list = noticeService.homePageNotice();

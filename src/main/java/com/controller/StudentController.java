@@ -2,6 +2,7 @@ package com.controller;
 
 import com.annotation.PassToken;
 import com.annotation.RequestLog;
+import com.github.pagehelper.PageInfo;
 import com.model.Student;
 import com.model.User;
 import com.service.StudentService;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -57,20 +57,19 @@ public class StudentController {
     /**
      * 查找学生信息
      */
+    @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
                            @RequestParam(defaultValue = "10") Integer pageSize,
                            @RequestParam(defaultValue = "") String search) {
-        List<Student> list = studentService.find(pageNum, pageSize, search);
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("list", list);
-        map.put("total", studentService.stuNum());
+        PageInfo<Student> list = studentService.find(pageNum, pageSize, search);
         if (list != null) {
-            return Result.success(map);
+            return Result.success(list);
         } else {
             return Result.error("查询失败");
         }
     }
+
 
     /**
      * 添加学生信息
@@ -78,6 +77,7 @@ public class StudentController {
     @RequestLog
     @PostMapping("/add")
     public Result add(@RequestBody Student student) {
+        System.out.println(student);
         int i = studentService.addStudent(student);
         return i == 1 ? Result.success("添加成功") : Result.error("添加失败");
     }
@@ -115,23 +115,12 @@ public class StudentController {
      * 根据学号获取学生信息
      */
     @RequestLog
-    @PostMapping("/getStudent/{id}")
+    @GetMapping("/getStudent/{id}")
     public Result getStudent(@PathVariable String id) {
         Student student = studentService.selectStudentById(id);
-        return Result.success(student);
+        return student != null ? Result.success(student) : Result.error("学号已经存在");
     }
-
-    /**
-     * 根据学号获取学生信息
-     */
-    @RequestLog
-    @PostMapping("/getStudent")
-    public Result getStudent(@RequestBody Map<String, String> map) {
-        Student student = studentService.selectStudentById(map.get("id"));
-        return Result.success(student);
-    }
-
-
+    
     /**
      * 主页顶部：学生统计
      */

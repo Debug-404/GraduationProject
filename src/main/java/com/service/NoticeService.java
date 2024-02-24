@@ -1,13 +1,13 @@
 package com.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.mapper.NoticeMapper;
 import com.model.Notice;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class NoticeService {
@@ -28,12 +28,10 @@ public class NoticeService {
     /**
      * 公告查找
      */
-    public List<Notice> find(Integer startIndex, Integer pageSize, String search) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("startIndex", startIndex);
-        map.put("pageSize", pageSize);
-        map.put("search", search);
-        return noticeMapper.find(map);
+    public PageInfo<Notice> find(Integer pageNum, Integer pageSize, String search) {
+        PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
+        List<Notice> list = noticeMapper.find(search);
+        return new PageInfo<>(list);
     }
 
     /**
