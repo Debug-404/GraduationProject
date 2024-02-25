@@ -11,9 +11,7 @@ import java.util.List;
 
 @Service
 public class NoticeService {
-    /**
-     * 注入DAO层对象
-     */
+
     @Resource
     NoticeMapper noticeMapper;
 

@@ -4,7 +4,6 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.mapper.StudentMapper;
 import com.model.Student;
-import com.model.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -32,12 +31,6 @@ public class StudentService {
 
     public Student selectStudentById(String id) {
         return studentMapper.selectStudentById(id);
-    }
-
-
-    public boolean selectPassword(User user) {
-        Student student = studentMapper.selectStudentById(user.getId());
-        return student.getPassword().equals(user.getPassword());
     }
 
 

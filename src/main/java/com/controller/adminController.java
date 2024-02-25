@@ -9,7 +9,7 @@ import com.utils.Result;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.Map;
+import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/admin")
@@ -24,33 +24,30 @@ public class adminController {
     @PassToken
     @RequestLog
     @RequestMapping(value = "/login")
-    public Result login(@RequestBody User user) {
+    public Result login(@RequestBody User user, HttpSession session) {
         Admin admin = adminService.selectAdminById(user.getId());
+        if (admin == null) return Result.unauthorized("账号或者密码错误，请重新登录");
         if (admin.getPassword().equals(user.getPassword())) {
-            return Result.success("登录成功");
+            session.setAttribute("Identity", "admin");
+            session.setAttribute("User", admin);
+            return Result.success("登录成功", admin);
         } else return Result.unauthorized("账号或者密码错误，请重新登录");
+    }
+
+    @RequestLog
+    @GetMapping("/getAdmin")
+    public Result getAdmin() {
+        Admin admin = adminService.selectAdminById("0001");
+        return Result.success(admin);
     }
 
     /**
      * 管理员信息更新
      */
+    @RequestLog
     @PutMapping("/update")
-    @RequestLog
     public Result update(@RequestBody Admin admin) {
-        return adminService.updateAdmin(admin) == 1 ? Result.success("删除成功") : Result.error("删除失败");
+        return adminService.updateAdmin(admin) == 1 ? Result.success("更新成功") : Result.error("更新失败");
     }
 
-
-    @RequestLog
-    @PostMapping("/intoNotice")
-    public Result intoNotice(@RequestBody Map<String, Object> map) {
-        adminService.intoNotice(map);
-        return Result.success();
-    }
-
-    @RequestLog
-    @PostMapping("/getNotice/{currentPage}")
-    public Result getNotice(@PathVariable int currentPage) {
-        return Result.success(adminService.findByLimit(currentPage, 5));
-    }
 }

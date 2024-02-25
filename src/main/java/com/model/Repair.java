@@ -10,7 +10,7 @@ public class Repair {
     //单号
     private int id;
     //学生学号
-    private String Sid;
+    private String sId;
     //学生姓名
     private String sName;
     //学生手机号
@@ -25,6 +25,7 @@ public class Repair {
     private String content;
     //维修员
     private String repairer;
+    private String rName;
     //维修员手机号
     private String rPhone;
     //维修状态
@@ -33,4 +34,5 @@ public class Repair {
     private String orderBuildTime;
     //订单完成时间
     private String orderFinishTime;
+    private String finish;
 }

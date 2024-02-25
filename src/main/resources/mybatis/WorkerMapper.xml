@@ -3,15 +3,50 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mapper.WorkerMapper">
-    <select id="findAll" resultType="com.model.Worker">
-        select id, password, name, sex, phone, age
+    <resultMap id="WorkerMap" type="com.model.Worker">
+        <result property="repairNum" column="repair_num"/>
+    </resultMap>
+    <select id="find" resultMap="WorkerMap" parameterType="java.lang.String">
+        select id, password, name, sex, phone, age, repair_num
         from worker
+        where name like concat('%', #{search}, '%')
+          and flag != 0
     </select>
-    <select id="selectRepairById" resultType="com.model.Worker">
-        select id, password, name, sex, phone, age
+    <select id="selectRepairById" resultMap="WorkerMap">
+        select id, password, name, sex, phone, age, repair_num
         from worker
         where id = #{id}
         limit 1
     </select>
-
+    <select id="minRepairNum" resultMap="WorkerMap">
+        select id,
+               password,
+               name,
+               sex,
+               age,
+               phone,
+               flag,
+               repair_num
+        from worker
+        order by repair_num asc
+        limit 1
+    </select>
+    <insert id="addNewDormManager" parameterType="com.model.Worker">
+        insert into worker(id, password, name, sex, age, phone) value (#{id}, #{password}, #{name}, #{sex}, #{age}, #{phone})
+    </insert>
+    <update id="updateNewDormManager" parameterType="com.model.Worker">
+        update worker
+        set password  =#{password},
+            name=#{name},
+            sex=#{sex},
+            age=#{age},
+            phone=#{phone},
+            repair_num=#{repairNum}
+        where id = #{id}
+    </update>
+    <update id="deleteDormManager" parameterType="java.lang.String">
+        update worker
+        set flag =0
+        where id = #{id}
+    </update>
 </mapper>

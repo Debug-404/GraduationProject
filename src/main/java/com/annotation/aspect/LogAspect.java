@@ -1,6 +1,5 @@
 package com.annotation.aspect;
 
-import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -50,7 +49,7 @@ public class LogAspect {
         // 打印请求的 IP
         System.out.println("IP             : " + request.getRemoteHost());
         // 打印请求入参
-        System.out.println("Request Args   : " + JSON.toJSONString(joinPoint.getArgs()));
+        //System.out.println("Request Args   : " + JSON.toJSONString(joinPoint.getArgs()));
 //        Object[] args = joinPoint.getArgs();
 //        if (Objects.nonNull(args)) {
 //            List<Object> argsList = Arrays.asList(args);

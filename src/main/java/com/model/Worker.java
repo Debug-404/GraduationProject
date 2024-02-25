@@ -10,5 +10,5 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class Worker extends User {
     //接单数量
-    public static int sun = 0;
+    int repairNum;
 }

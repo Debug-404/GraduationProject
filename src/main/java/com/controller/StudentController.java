@@ -6,12 +6,11 @@ import com.github.pagehelper.PageInfo;
 import com.model.Student;
 import com.model.User;
 import com.service.StudentService;
-import com.utils.JwtUtils;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @RestController
@@ -35,14 +34,13 @@ public class StudentController {
     @PassToken
     @RequestLog
     @RequestMapping(value = "/login")
-    public Result login(@RequestBody User user) {
-        if (studentService.selectPassword(user)) {
-            Map<String, String> map = new HashMap<>();
-            map.put("id", user.getId());
-            String token = JwtUtils.createToken(map);
-            map.clear();
-            map.put("token", token);
-            return Result.success("登录成功", map);
+    public Result login(@RequestBody User user, HttpSession session) {
+        Student student = studentService.selectStudentById(user.getId());
+        if (student == null) return Result.unauthorized("账号或者密码错误，请重新登录");
+        if (student.getPassword().equals(user.getPassword())) {
+            session.setAttribute("Identity", "stu");
+            session.setAttribute("User", student);
+            return Result.success("登录成功", student);
         } else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
@@ -120,7 +118,7 @@ public class StudentController {
         Student student = studentService.selectStudentById(id);
         return student != null ? Result.success(student) : Result.error("学号已经存在");
     }
-    
+
     /**
      * 主页顶部：学生统计
      */

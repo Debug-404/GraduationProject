@@ -3,21 +3,41 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mapper.RepairMapper">
+    <resultMap id="RepairMap" type="com.model.Repair">
+        <result property="id" column="order_id"/>
+        <result property="sId" column="sid"/>
+        <result property="sName" column="sname"/>
+        <result property="sPhone" column="sphone"/>
+        <result property="dormBuildId" column="dormbuild_id"/>
+        <result property="dormRoomId" column="dormroom_id"/>
+        <result property="repairer" column="rid"/>
+        <result property="rName" column="rname"/>
+        <result property="rPhone" column="rphone"/>
+        <result property="type" column="type"/>
+        <result property="content" column="content"/>
+        <result property="state" column="state"/>
+        <result property="orderBuildTime" column="order_buildtime"/>
+        <result property="orderFinishTime" column="order_finishtime"/>
+    </resultMap>
+
+
     <insert id="addNewOrder"></insert>
     <update id="updateNewOrder" parameterType="com.model.Repair">
         update repair
-        set order_id         = #{id},
-            sid              = #{Sid},
+        set sid              = #{Sid},
             sname            =#{sName},
             sphone           = #{sPhone},
             dormbuild_id     = #{dormBuildId},
             dormroom_id      = #{dormRoomId},
             rid              = #{repairer},
+            rname            = #{rName},
             rphone           = #{rPhone},
             type             = #{type},
             content          = #{content},
             state            = #{state},
-            order_finishtime = #{orderFinishTime}
+            order_finishtime = #{orderFinishTime},
+            finish           = #{finish}
+        where order_id = #{id}
     </update>
     <delete id="deleteOrder" parameterType="java.lang.Integer">
         delete
@@ -27,5 +47,16 @@
     <select id="showOrderNum" resultType="java.lang.Integer">
         select count(order_id)
         from repair
+    </select>
+    <select id="find" resultMap="RepairMap" parameterType="java.lang.String">
+        select *
+        from repair
+        where sname = #{search}
+    </select>
+    <select id="individualFind" resultMap="RepairMap">
+        select *
+        from repair
+        where sid = #{sId}
+          and type like concat('%', #{search}, '%')
     </select>
 </mapper>
