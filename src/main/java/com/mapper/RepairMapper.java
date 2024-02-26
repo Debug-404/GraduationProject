@@ -17,8 +17,7 @@ public interface RepairMapper {
 
     //新增订单
     int addNewOrder(Repair repair);
-
-
+    
     //更新订单信息
     int updateNewOrder(Repair repair);
 

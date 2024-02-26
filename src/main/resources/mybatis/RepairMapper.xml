@@ -20,11 +20,14 @@
         <result property="orderFinishTime" column="order_finishtime"/>
     </resultMap>
 
-
-    <insert id="addNewOrder"></insert>
+    <insert id="addNewOrder" parameterType="com.model.Repair">
+        insert into repair(sid, sname, sphone, dormbuild_id, dormroom_id, rid, rname, rphone, type, content, state)
+            value (#{sId}, #{sName}, #{sPhone}, #{dormBuildId}, #{dormRoomId}, #{repairer}, #{rName}, #{rPhone},
+                   #{type}, #{content}, #{state})
+    </insert>
     <update id="updateNewOrder" parameterType="com.model.Repair">
         update repair
-        set sid              = #{Sid},
+        set sid              = #{sId},
             sname            =#{sName},
             sphone           = #{sPhone},
             dormbuild_id     = #{dormBuildId},
@@ -36,7 +39,8 @@
             content          = #{content},
             state            = #{state},
             order_finishtime = #{orderFinishTime},
-            finish           = #{finish}
+            finish           = #{finish},
+            evaluate         = #{evaluate}
         where order_id = #{id}
     </update>
     <delete id="deleteOrder" parameterType="java.lang.Integer">
@@ -51,7 +55,7 @@
     <select id="find" resultMap="RepairMap" parameterType="java.lang.String">
         select *
         from repair
-        where sname = #{search}
+        where sname like concat('%', #{search}, '%')
     </select>
     <select id="individualFind" resultMap="RepairMap">
         select *

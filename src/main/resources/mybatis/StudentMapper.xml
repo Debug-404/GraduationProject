@@ -21,7 +21,7 @@
     </select>
 
     <select id="selectStudentById" resultMap="StudentMap">
-        select id, password, name, age, sex, phone, dormroom_id
+        select *
         from student
         where id = #{id}
           and flag != 0
@@ -32,14 +32,7 @@
         where flag != 0
     </select>
     <select id="find" resultMap="StudentMap" parameterType="map">
-        select id,
-               password,
-               name,
-               age,
-               sex,
-               phone,
-               dormbuild_id,
-               dormroom_id
+        select *
         from student
         where name like concat('%', #{search}, '%')
           and flag != 0

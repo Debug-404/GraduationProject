@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DormManagerMapper">
+    <resultMap id="DormManagerMap" type="com.model.DormManager">
+        <result property="dormBuildId" column="dormbuild_id"/>
+    </resultMap>
+    <select id="selectDormManagerById" resultMap="DormManagerMap" parameterType="java.lang.String">
+        select *
+        from dorm_manager
+        where id = #{id}
+    </select>
+    <select id="find" resultMap="DormManagerMap" parameterType="java.lang.String">
+        select *
+        from dorm_manager
+        where name like concat('%', #{search}, '%')
+    </select>
+    <insert id="addNewDormManager" parameterType="com.model.DormManager">
+        insert into dorm_manager(id, dormbuild_id, name, sex, age, phone) value (#{id}, #{dormBuildId}, #{name}, #{sex}, #{age}, #{phone})
+    </insert>
+    <update id="updateDormManager">
+        update dorm_manager
+        set dormbuild_id=#{dormBuildId},
+            name=#{name},
+            sex=#{sex},
+            age=#{age},
+            phone=#{phone}
+        where id = #{id}
+    </update>
+    <delete id="deleteDormManager" parameterType="java.lang.String">
+        delete
+        from dorm_manager
+        where id = #{id}
+    </delete>
+
+</mapper>

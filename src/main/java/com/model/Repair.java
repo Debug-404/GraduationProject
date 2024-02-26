@@ -34,5 +34,7 @@ public class Repair {
     private String orderBuildTime;
     //订单完成时间
     private String orderFinishTime;
-    private String finish;
+    private int finish;
+    //评价
+    private String evaluate;
 }

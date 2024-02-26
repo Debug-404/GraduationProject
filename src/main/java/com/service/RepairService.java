@@ -37,6 +37,8 @@ public class RepairService {
 
     //更新订单信息
     public int updateNewOrder(Repair repair) {
+        if (repair.getState().equals("完成"))
+            repair.setFinish(1);
         return repairMapper.updateNewOrder(repair);
     }
 
@@ -52,7 +54,7 @@ public class RepairService {
     }
 
     public PageInfo<Repair> individualFind(Integer pageNum, Integer pageSize, String search, String sId) {
-        
+
         PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
         List<Repair> list = repairMapper.individualFind(search, sId);
         return new PageInfo<>(list);

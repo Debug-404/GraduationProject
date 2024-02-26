@@ -19,9 +19,7 @@ import java.lang.reflect.Method;
 public class TokenInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
         if (!(handler instanceof HandlerMethod)) return true;
-
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
         //检查是否通过有PassToken注解
