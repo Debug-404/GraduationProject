@@ -11,14 +11,14 @@ import java.util.List;
 public interface WorkerMapper {
     List<Worker> find(String search);
 
-    Worker selectRepairById(String id);
+    Worker selectWorkerById(String id);
 
     //接单最少数
     Worker minRepairNum();
 
-    int addNewDormManager(Worker worker);
+    int addNewWorker(Worker worker);
 
-    int updateNewDormManager(Worker worker);
+    int updateWorker(Worker worker);
 
-    int deleteDormManager(String id);
+    int deleteWorker(String id);
 }

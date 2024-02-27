@@ -12,7 +12,7 @@
         where name like concat('%', #{search}, '%')
           and flag != 0
     </select>
-    <select id="selectRepairById" resultMap="WorkerMap">
+    <select id="selectWorkerById" resultMap="WorkerMap">
         select id, password, name, sex, phone, age, repair_num
         from worker
         where id = #{id}
@@ -31,10 +31,10 @@
         order by repair_num asc
         limit 1
     </select>
-    <insert id="addNewDormManager" parameterType="com.model.Worker">
+    <insert id="addNewWorker" parameterType="com.model.Worker">
         insert into worker(id, password, name, sex, age, phone) value (#{id}, #{password}, #{name}, #{sex}, #{age}, #{phone})
     </insert>
-    <update id="updateNewDormManager" parameterType="com.model.Worker">
+    <update id="updateWorker" parameterType="com.model.Worker">
         update worker
         set password  =#{password},
             name=#{name},
@@ -44,7 +44,7 @@
             repair_num=#{repairNum}
         where id = #{id}
     </update>
-    <update id="deleteDormManager" parameterType="java.lang.String">
+    <update id="deleteWorker" parameterType="java.lang.String">
         update worker
         set flag =0
         where id = #{id}

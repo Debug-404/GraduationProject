@@ -32,7 +32,7 @@ public class DormManagerService {
      */
 
     public PageInfo<DormManager> find(Integer pageNum, Integer pageSize, String search) {
-        PageHelper.startPage((pageNum - 1) * pageSize);
+        PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
         List<DormManager> list = dormManagerMapper.find(search);
         return new PageInfo<>(list);
     }

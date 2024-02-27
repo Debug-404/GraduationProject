@@ -8,33 +8,33 @@ import lombok.Data;
 @Data
 public class Repair {
     //单号
-    private int id;
+    int id;
     //学生学号
-    private String sId;
+    String studentId;
     //学生姓名
-    private String sName;
+    String studentName;
     //学生手机号
-    private String sPhone;
+    String studentPhone;
     //报修宿舍楼
-    private int dormBuildId;
+    int dormBuildId;
     //报修宿舍房间号
-    private int dormRoomId;
+    int dormRoomId;
     //维修类型
-    private String type;
+    String type;
     //表单内容
-    private String content;
+    String content;
     //维修员
-    private String repairer;
-    private String rName;
+    String workerId;
+    String workerName;
     //维修员手机号
-    private String rPhone;
+    String workerPhone;
     //维修状态
-    private String state;
+    String state = "未完成";
     //订单创建时间
-    private String orderBuildTime;
+    String orderBuildTime;
     //订单完成时间
-    private String orderFinishTime;
-    private int finish;
+    String orderFinishTime;
+    int finish;
     //评价
-    private String evaluate;
+    String evaluate;
 }

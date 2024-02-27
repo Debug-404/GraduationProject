@@ -56,6 +56,7 @@ public class RepairController {
     @RequestLog
     @PostMapping("/add")
     public Result add(@RequestBody Repair repair) {
+        System.out.println(repair);
         int i = repairService.addNewOrder(repair);
         if (i == 1) {
             return Result.success();

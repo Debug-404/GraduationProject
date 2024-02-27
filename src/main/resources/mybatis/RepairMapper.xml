@@ -5,14 +5,14 @@
 <mapper namespace="com.mapper.RepairMapper">
     <resultMap id="RepairMap" type="com.model.Repair">
         <result property="id" column="order_id"/>
-        <result property="sId" column="sid"/>
-        <result property="sName" column="sname"/>
-        <result property="sPhone" column="sphone"/>
+        <result property="studentId" column="sid"/>
+        <result property="studentName" column="sname"/>
+        <result property="studentPhone" column="sphone"/>
         <result property="dormBuildId" column="dormbuild_id"/>
         <result property="dormRoomId" column="dormroom_id"/>
-        <result property="repairer" column="rid"/>
-        <result property="rName" column="rname"/>
-        <result property="rPhone" column="rphone"/>
+        <result property="workerId" column="rid"/>
+        <result property="workerName" column="rname"/>
+        <result property="workerPhone" column="rphone"/>
         <result property="type" column="type"/>
         <result property="content" column="content"/>
         <result property="state" column="state"/>
@@ -21,20 +21,22 @@
     </resultMap>
 
     <insert id="addNewOrder" parameterType="com.model.Repair">
-        insert into repair(sid, sname, sphone, dormbuild_id, dormroom_id, rid, rname, rphone, type, content, state)
-            value (#{sId}, #{sName}, #{sPhone}, #{dormBuildId}, #{dormRoomId}, #{repairer}, #{rName}, #{rPhone},
+        insert into repair(sid, sname, sphone, dormbuild_id, dormroom_id, wid, wname, wphone, type, content, state)
+            value (#{studentId}, #{studentName}, #{studentPhone}, #{dormBuildId}, #{dormRoomId}, #{workerId},
+                   #{workerName},
+                   #{workerPhone},
                    #{type}, #{content}, #{state})
     </insert>
     <update id="updateNewOrder" parameterType="com.model.Repair">
         update repair
-        set sid              = #{sId},
-            sname            =#{sName},
-            sphone           = #{sPhone},
+        set sid              = #{studentId},
+            sname            =#{studentName},
+            sphone           = #{studentPhone},
             dormbuild_id     = #{dormBuildId},
             dormroom_id      = #{dormRoomId},
-            rid              = #{repairer},
-            rname            = #{rName},
-            rphone           = #{rPhone},
+            wid              = #{repairer},
+            wname            = #{rName},
+            wphone           = #{rPhone},
             type             = #{type},
             content          = #{content},
             state            = #{state},
@@ -51,6 +53,7 @@
     <select id="showOrderNum" resultType="java.lang.Integer">
         select count(order_id)
         from repair
+        where finish = 0
     </select>
     <select id="find" resultMap="RepairMap" parameterType="java.lang.String">
         select *
@@ -62,5 +65,10 @@
         from repair
         where sid = #{sId}
           and type like concat('%', #{search}, '%')
+    </select>
+    <select id="selectRepairerById" resultMap="RepairMap" parameterType="int">
+        select *
+        from repair
+        where order_id = #{id}
     </select>
 </mapper>

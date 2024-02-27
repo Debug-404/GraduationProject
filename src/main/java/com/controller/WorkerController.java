@@ -63,7 +63,7 @@ public class WorkerController {
     @RequestLog
     @PostMapping("/add")
     public Result add(@RequestBody Worker worker) {
-        int i = workerService.addNewDormManager(worker);
+        int i = workerService.addNewWorker(worker);
         return i == 1 ? Result.success("添加成功") : Result.error("添加失败");
     }
 
@@ -73,7 +73,7 @@ public class WorkerController {
     @RequestLog
     @PutMapping("/update")
     public Result update(@RequestBody Worker worker) {
-        int i = workerService.updateNewDormManager(worker);
+        int i = workerService.updateWorker(worker);
         return i == 1 ? Result.success("更新成功") : Result.error("更新失败");
     }
 
@@ -83,7 +83,7 @@ public class WorkerController {
     @RequestLog
     @DeleteMapping("/delete/{id}")
     public Result delete(@PathVariable String id) {
-        int i = workerService.deleteDormManager(id);
+        int i = workerService.deleteWorker(id);
         return i == 1 ? Result.success("删除成功") : Result.error("删除失败");
     }
 }

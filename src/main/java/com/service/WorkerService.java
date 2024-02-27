@@ -21,24 +21,19 @@ public class WorkerService {
     }
 
     public Worker selectRepairById(String id) {
-        return workerMapper.selectRepairById(id);
+        return workerMapper.selectWorkerById(id);
     }
 
-    //接单最少数
-    public Worker minRepairNum() {
-        return workerMapper.minRepairNum();
+    public int addNewWorker(Worker worker) {
+        return workerMapper.addNewWorker(worker);
     }
 
-    public int addNewDormManager(Worker worker) {
-        return workerMapper.addNewDormManager(worker);
+    public int updateWorker(Worker worker) {
+        return workerMapper.updateWorker(worker);
     }
 
-    public int updateNewDormManager(Worker worker) {
-        return workerMapper.updateNewDormManager(worker);
-    }
-
-    public int deleteDormManager(String id) {
-        return workerMapper.deleteDormManager(id);
+    public int deleteWorker(String id) {
+        return workerMapper.deleteWorker(id);
     }
 
 }
