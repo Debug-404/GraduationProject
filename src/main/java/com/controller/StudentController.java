@@ -20,7 +20,6 @@ public class StudentController {
     @Resource
     StudentService studentService;
 
-
     @RequestLog
     @PostMapping("/repair")
     public Result Repair(@RequestBody Map<String, Object> map) {
@@ -36,19 +35,20 @@ public class StudentController {
     @RequestMapping(value = "/login")
     public Result login(@RequestBody User user, HttpSession session) {
         Student student = studentService.selectStudentById(user.getId());
-        if (student == null) return Result.unauthorized("账号或者密码错误，请重新登录");
+        if (student == null)
+            return Result.unauthorized("账号或者密码错误，请重新登录");
         if (student.getPassword().equals(user.getPassword())) {
             session.setAttribute("Identity", "stu");
             session.setAttribute("User", student);
             return Result.success("登录成功", student);
-        } else return Result.unauthorized("账号或者密码错误，请重新登录");
+        } else
+            return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
     @PassToken
     @RequestLog
     @RequestMapping("/register")
     public Result register(@RequestBody Map<String, Object> map) {
-        System.out.println(map.toString());
         return Result.success("注册成功");
     }
 
@@ -58,8 +58,8 @@ public class StudentController {
     @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
-                           @RequestParam(defaultValue = "10") Integer pageSize,
-                           @RequestParam(defaultValue = "") String search) {
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "") String search) {
         PageInfo<Student> list = studentService.find(pageNum, pageSize, search);
         if (list != null) {
             return Result.success(list);
@@ -68,14 +68,12 @@ public class StudentController {
         }
     }
 
-
     /**
      * 添加学生信息
      */
     @RequestLog
     @PostMapping("/add")
     public Result add(@RequestBody Student student) {
-        System.out.println(student);
         int i = studentService.addStudent(student);
         return i == 1 ? Result.success("添加成功") : Result.error("添加失败");
     }
@@ -133,4 +131,3 @@ public class StudentController {
         }
     }
 }
-

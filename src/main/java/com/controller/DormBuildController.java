@@ -20,6 +20,7 @@ public class DormBuildController {
     /**
      * 楼宇查找
      */
+    @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
                            @RequestParam(defaultValue = "10") Integer pageSize,
@@ -73,7 +74,6 @@ public class DormBuildController {
         List<Integer> buildingId = buildingName.stream()
                 .map(dormBuildId -> dormBuildId.getDormBuildId())
                 .collect(Collectors.toList());
-        System.out.println(buildingId);
         return Result.success(buildingId);
     }
 }

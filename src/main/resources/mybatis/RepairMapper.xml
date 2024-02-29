@@ -10,9 +10,9 @@
         <result property="studentPhone" column="sphone"/>
         <result property="dormBuildId" column="dormbuild_id"/>
         <result property="dormRoomId" column="dormroom_id"/>
-        <result property="workerId" column="rid"/>
-        <result property="workerName" column="rname"/>
-        <result property="workerPhone" column="rphone"/>
+        <result property="workerId" column="wid"/>
+        <result property="workerName" column="wname"/>
+        <result property="workerPhone" column="wphone"/>
         <result property="type" column="type"/>
         <result property="content" column="content"/>
         <result property="state" column="state"/>
@@ -34,9 +34,9 @@
             sphone           = #{studentPhone},
             dormbuild_id     = #{dormBuildId},
             dormroom_id      = #{dormRoomId},
-            wid              = #{repairer},
-            wname            = #{rName},
-            wphone           = #{rPhone},
+            wid              = #{workerId},
+            wname            = #{workerName},
+            wphone           = #{workerPhone},
             type             = #{type},
             content          = #{content},
             state            = #{state},

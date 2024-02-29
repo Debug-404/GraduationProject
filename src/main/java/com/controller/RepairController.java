@@ -22,8 +22,8 @@ public class RepairController {
     @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
-                           @RequestParam(defaultValue = "10") Integer pageSize,
-                           @RequestParam(defaultValue = "") String search) {
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "") String search) {
         PageInfo<Repair> pageInfo = repairService.find(pageNum, pageSize, search);
         if (pageInfo != null) {
             return Result.success(pageInfo);
@@ -38,11 +38,10 @@ public class RepairController {
     @RequestLog
     @GetMapping("/find/{id}")
     public Result individualFind(@RequestParam(defaultValue = "1") Integer pageNum,
-                                 @RequestParam(defaultValue = "10") Integer pageSize,
-                                 @RequestParam(defaultValue = "") String search,
-                                 @PathVariable String id) {
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "") String search,
+            @PathVariable String id) {
         PageInfo<Repair> pageInfo = repairService.individualFind(pageNum, pageSize, search, id);
-        System.out.println(pageInfo);
         if (pageInfo != null) {
             return Result.success(pageInfo);
         } else {
@@ -56,7 +55,6 @@ public class RepairController {
     @RequestLog
     @PostMapping("/add")
     public Result add(@RequestBody Repair repair) {
-        System.out.println(repair);
         int i = repairService.addNewOrder(repair);
         if (i == 1) {
             return Result.success();
@@ -92,7 +90,6 @@ public class RepairController {
             return Result.error("删除失败");
         }
     }
-
 
     /**
      * 首页顶部：报修统计

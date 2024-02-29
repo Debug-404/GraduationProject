@@ -8,19 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
-      <change beforePath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/annotation/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DormBuildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DormBuildController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/RepairController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/WorkerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/WorkerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/RepairMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/RepairMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/WorkerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/WorkerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Repair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/DormManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/DormManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/RepairService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/RepairService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/WorkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/WorkerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/RepairMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/RepairMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/WorkerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/WorkerMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +71,7 @@
     &quot;JUnit.SpringBootVueApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.SpringBootVueApplicationTests.test1.executor&quot;: &quot;Run&quot;,
     &quot;Maven.SpringBootVue [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.SpringBootVue [package].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -88,6 +84,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/源文件/java/SpringBootVue&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -111,6 +108,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\源文件\java\SpringBootVue" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.controller" />
       <recent name="com.mapper" />
@@ -285,6 +285,11 @@
       <workItem from="1708929981007" duration="12083000" />
       <workItem from="1708966364456" duration="104000" />
       <workItem from="1709010446623" duration="9070000" />
+      <workItem from="1709040147351" duration="96000" />
+      <workItem from="1709040877577" duration="474000" />
+      <workItem from="1709046516739" duration="269000" />
+      <workItem from="1709119617552" duration="52000" />
+      <workItem from="1709120213125" duration="2625000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -494,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709010595497</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="nest">
+      <option name="closed" value="true" />
+      <created>1709040175217</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709040175217</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
