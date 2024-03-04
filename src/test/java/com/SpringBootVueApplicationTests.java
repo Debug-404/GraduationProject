@@ -2,44 +2,25 @@ package com;
 
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.mapper.DormRoomMapper;
-import com.mapper.RepairMapper;
 import com.mapper.StudentMapper;
-import com.mapper.WorkerMapper;
-import com.service.AdminService;
-import com.service.NoticeService;
+import com.model.Student;
 import com.service.RepairService;
-import com.service.StudentService;
 import com.utils.JwtUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @SpringBootTest
 class SpringBootVueApplicationTests {
 
     @Resource
-    StudentService studentService;
-
-    @Resource
     StudentMapper studentMapper;
-    @Resource
-    NoticeService noticeService;
 
-    @Resource
-    AdminService adminService;
-
-    @Resource
-    WorkerMapper workerMapper;
-
-    @Resource
-    DormRoomMapper dormRoomMapper;
-
-    @Resource
-    RepairMapper repairMapper;
     @Resource
     RepairService repairService;
 
@@ -55,7 +36,9 @@ class SpringBootVueApplicationTests {
 
     @Test
     public void test1() {
-        System.out.println(repairService.individualFind(1, 10, "", "0912200201"));
+        List<Student> list = studentMapper.findAll();
+        List<Student> collect = list.stream().filter(student -> student.getAge() > 22).collect(Collectors.toList());
+        System.out.println(collect);
     }
 
 }

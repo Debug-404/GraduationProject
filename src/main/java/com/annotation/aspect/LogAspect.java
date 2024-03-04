@@ -13,6 +13,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -61,9 +62,9 @@ public class LogAspect {
             List<Object> argsList = Arrays.asList(args);
             // 将 HttpServletResponse 和 HttpServletRequest 参数移除，不然会报异常
             List<Object> collect = argsList.stream()
-                    .filter(o -> !(o instanceof HttpServletResponse || o instanceof HttpServletRequest))
+                    .filter(o -> !(o instanceof HttpServletResponse || o instanceof HttpServletRequest || o instanceof HttpSession))
                     .collect(Collectors.toList());
-            collect.toArray(args);
+            args = collect.toArray(args);
         }
         log.info("Request Args   : " + JSON.toJSONString(args));
         log.info("=======================================================================================================");
