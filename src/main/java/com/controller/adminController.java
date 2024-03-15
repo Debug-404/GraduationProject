@@ -1,6 +1,5 @@
 package com.controller;
 
-import com.annotation.PassToken;
 import com.annotation.RequestLog;
 import com.model.Admin;
 import com.model.User;
@@ -21,7 +20,6 @@ public class adminController {
     /**
      * 管理员登录
      */
-    @PassToken
     @RequestLog
     @RequestMapping(value = "/login")
     public Result login(@RequestBody User user, HttpSession session) {

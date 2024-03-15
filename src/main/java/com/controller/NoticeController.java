@@ -23,11 +23,10 @@ public class NoticeController {
     @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
-                           @RequestParam(defaultValue = "10") Integer pageSize,
-                           @RequestParam(defaultValue = "") String search) {
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "") String search) {
         PageInfo<Notice> pageInfo = noticeService.find(pageNum, pageSize, search);
         return Result.success(pageInfo);
-
     }
 
     /**

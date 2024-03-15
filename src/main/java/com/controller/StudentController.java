@@ -45,10 +45,10 @@ public class StudentController {
             return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
-    @PassToken
     @RequestLog
     @RequestMapping("/register")
     public Result register(@RequestBody Map<String, Object> map) {
+        System.out.println(map);
         return Result.success("注册成功");
     }
 
@@ -58,8 +58,8 @@ public class StudentController {
     @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
-            @RequestParam(defaultValue = "10") Integer pageSize,
-            @RequestParam(defaultValue = "") String search) {
+                           @RequestParam(defaultValue = "10") Integer pageSize,
+                           @RequestParam(defaultValue = "") String search) {
         PageInfo<Student> list = studentService.find(pageNum, pageSize, search);
         if (list != null) {
             return Result.success(list);

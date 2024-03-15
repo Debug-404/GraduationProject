@@ -17,7 +17,7 @@
     </update>
 
     <select id="selectAdminById" resultType="com.model.Admin">
-        select id, password, name, age, sex, phone
+        select *
         from admin
         where id = #{id};
     </select>
