@@ -22,14 +22,10 @@ public class RepairController {
     @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
-            @RequestParam(defaultValue = "10") Integer pageSize,
-            @RequestParam(defaultValue = "") String search) {
+                           @RequestParam(defaultValue = "10") Integer pageSize,
+                           @RequestParam(defaultValue = "") String search) {
         PageInfo<Repair> pageInfo = repairService.find(pageNum, pageSize, search);
-        if (pageInfo != null) {
-            return Result.success(pageInfo);
-        } else {
-            return Result.error("查询失败");
-        }
+        return pageInfo != null ? Result.success(pageInfo) : Result.error("查询失败");
     }
 
     /**
@@ -38,15 +34,11 @@ public class RepairController {
     @RequestLog
     @GetMapping("/find/{id}")
     public Result individualFind(@RequestParam(defaultValue = "1") Integer pageNum,
-            @RequestParam(defaultValue = "10") Integer pageSize,
-            @RequestParam(defaultValue = "") String search,
-            @PathVariable String id) {
+                                 @RequestParam(defaultValue = "10") Integer pageSize,
+                                 @RequestParam(defaultValue = "") String search,
+                                 @PathVariable String id) {
         PageInfo<Repair> pageInfo = repairService.individualFind(pageNum, pageSize, search, id);
-        if (pageInfo != null) {
-            return Result.success(pageInfo);
-        } else {
-            return Result.error("查询失败");
-        }
+        return pageInfo != null ? Result.success(pageInfo) : Result.error("查询失败");
     }
 
     /**
@@ -56,11 +48,8 @@ public class RepairController {
     @PostMapping("/add")
     public Result add(@RequestBody Repair repair) {
         int i = repairService.addNewOrder(repair);
-        if (i == 1) {
-            return Result.success();
-        } else {
-            return Result.error("添加失败");
-        }
+        return i == 1 ? Result.success() : Result.error("添加失败");
+
     }
 
     /**
@@ -70,11 +59,7 @@ public class RepairController {
     @PutMapping("/update")
     public Result update(@RequestBody Repair repair) {
         int i = repairService.updateNewOrder(repair);
-        if (i == 1) {
-            return Result.success();
-        } else {
-            return Result.error("更新失败");
-        }
+        return i == 1 ? Result.success() : Result.error("更新失败");
     }
 
     /**
@@ -84,11 +69,7 @@ public class RepairController {
     @DeleteMapping("/delete/{id}")
     public Result delete(@PathVariable Integer id) {
         int i = repairService.deleteOrder(id);
-        if (i == 1) {
-            return Result.success();
-        } else {
-            return Result.error("删除失败");
-        }
+        return i == 1 ? Result.success() : Result.error("删除失败");
     }
 
     /**
@@ -98,10 +79,6 @@ public class RepairController {
     @GetMapping("/orderNum")
     public Result orderNum() {
         int num = repairService.showOrderNum();
-        if (num >= 0) {
-            return Result.success(num);
-        } else {
-            return Result.error("报修统计查询失败");
-        }
+        return num >= 0 ? Result.success(num) : Result.error("报修统计查询失败");
     }
 }

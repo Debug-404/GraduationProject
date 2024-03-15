@@ -20,31 +20,44 @@ public class DormRoomService {
         return dormRoomMapper.notFullRoom();
     }
 
-    //新增宿舍
+    /**
+     * 新增宿舍
+     */
     public int addNewRoom(DormRoom dormRoom) {
         return dormRoomMapper.addNewRoom(dormRoom);
     }
 
-    //更新宿舍信息
+    /**
+     * 更新宿舍信息
+     */
     public int updateNewRoom(DormRoom dormRoom) {
         return dormRoomMapper.updateNewRoom(dormRoom);
     }
 
-    //删除宿舍信息
+    /**
+     * 删除宿舍信息
+     */
     public int deleteRoom(Integer dormRoomId) {
         return dormRoomMapper.deleteRoom(dormRoomId);
     }
 
-    //主页 住宿人数
+    /**
+     * 主页 住宿人数
+     */
     public Long selectHaveRoomStuNum() {
         return dormRoomMapper.selectHaveRoomStuNum();
     }
 
-    //获取每栋宿舍学生总人数
+    /**
+     * 获取每栋宿舍学生总人数
+     */
     public Long getEachBuildingStuNum(int dormBuildId) {
         return dormRoomMapper.getEachBuildingStuNum(dormBuildId);
     }
 
+    /**
+     * 查找房间
+     */
     public PageInfo<DormRoom> find(Integer pageNum, Integer pageSize, String search) {
         PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
         List<DormRoom> list = dormRoomMapper.find(search);

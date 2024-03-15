@@ -13,13 +13,7 @@
         from student
         where flag != 0
     </select>
-
-    <select id="findByLimit" resultMap="StudentMap" parameterType="map">
-        select id, password, name, age, sex, phone, dormroom_id
-        from student
-        where flag != 0
-    </select>
-
+    
     <select id="selectStudentById" resultMap="StudentMap">
         select *
         from student
@@ -43,11 +37,6 @@
             value (#{id}, #{password}, #{name}, #{age}, #{sex}, #{phone})
     </insert>
 
-    <insert id="repair" parameterType="map">
-        insert into apply(sid, sname, region, room_no, sphone, type, details)
-            value (#{sid}, #{name}, #{region}, #{roomNo}, #{phone}, #{type}, #{details})
-    </insert>
-
     <update id="deleteStudent" parameterType="String">
         update student
         set flag=0
@@ -64,9 +53,4 @@
         where id = #{id}
     </update>
 
-    <update id="updatePassword" parameterType="map">
-        update student
-        set password = #{password}
-        where id = #{id}
-    </update>
 </mapper>

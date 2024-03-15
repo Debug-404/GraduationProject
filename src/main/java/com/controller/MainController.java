@@ -19,11 +19,7 @@ public class MainController {
     @GetMapping("/loadIdentity")
     public Result loadIdentity(HttpSession session) {
         Object identity = session.getAttribute("Identity");
-        if (identity != null) {
-            return Result.success(identity);
-        } else {
-            return Result.error("加载失败");
-        }
+        return identity != null ? Result.success(identity) : Result.error("加载失败");
     }
 
     /**
@@ -33,11 +29,7 @@ public class MainController {
     @GetMapping("/loadUserInfo")
     public Result loadUserInfo(HttpSession session) {
         Object User = session.getAttribute("User");
-        if (User != null) {
-            return Result.success(User);
-        } else {
-            return Result.error("加载失败");
-        }
+        return User != null ? Result.success(User) : Result.error("加载失败");
     }
 
     /**

@@ -5,7 +5,10 @@ import com.model.Admin;
 import com.model.User;
 import com.service.AdminService;
 import com.utils.Result;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -32,12 +35,6 @@ public class adminController {
         } else return Result.unauthorized("账号或者密码错误，请重新登录");
     }
 
-    @RequestLog
-    @GetMapping("/getAdmin")
-    public Result getAdmin() {
-        Admin admin = adminService.selectAdminById("0001");
-        return Result.success(admin);
-    }
 
     /**
      * 管理员信息更新

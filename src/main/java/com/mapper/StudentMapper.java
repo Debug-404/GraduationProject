@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 @Repository
@@ -30,9 +29,4 @@ public interface StudentMapper {
 
     //更新
     int updateStudent(Student student);
-
-    //更新密码
-    int updatePassword(Map<String, String> map);
-
-    void repair(Map<String, Object> map);
 }

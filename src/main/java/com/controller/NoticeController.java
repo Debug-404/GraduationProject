@@ -23,8 +23,8 @@ public class NoticeController {
     @RequestLog
     @GetMapping("/find")
     public Result findPage(@RequestParam(defaultValue = "1") Integer pageNum,
-            @RequestParam(defaultValue = "10") Integer pageSize,
-            @RequestParam(defaultValue = "") String search) {
+                           @RequestParam(defaultValue = "10") Integer pageSize,
+                           @RequestParam(defaultValue = "") String search) {
         PageInfo<Notice> pageInfo = noticeService.find(pageNum, pageSize, search);
         return Result.success(pageInfo);
     }
@@ -66,10 +66,6 @@ public class NoticeController {
     @GetMapping("/homePageNotice")
     public Result homePageNotice() {
         List<Notice> list = noticeService.homePageNotice();
-        if (list != null) {
-            return Result.success(list);
-        } else {
-            return Result.error("首页公告查询失败");
-        }
+        return list != null ? Result.success(list) : Result.error("首页公告查询失败");
     }
 }

@@ -20,13 +20,17 @@ public class RepairService {
     @Resource
     WorkerMapper workerMapper;
 
-    //显示订单数量
+    /**
+     * 显示订单数量
+     */
     public int showOrderNum() {
         return repairMapper.showOrderNum();
     }
 
 
-    //新增订单
+    /**
+     * 新增订单
+     */
     public int addNewOrder(Repair repair) {
         Worker worker = workerMapper.minRepairNum();
         repair.setWorkerId(worker.getId());
@@ -37,7 +41,9 @@ public class RepairService {
         return repairMapper.addNewOrder(repair);
     }
 
-    //更新订单信息
+    /**
+     * 更新订单信息
+     */
     public int updateNewOrder(Repair repair) {
         if (repair.getState().equals("完成")) {
             Worker worker = workerMapper.selectWorkerById(repair.getWorkerId());
@@ -48,7 +54,9 @@ public class RepairService {
         return repairMapper.updateNewOrder(repair);
     }
 
-    //删除订单
+    /**
+     * 删除订单
+     */
     public int deleteOrder(Integer id) {
         Repair repair = repairMapper.selectRepairerById(id);
         String repairer = repair.getWorkerId();
@@ -58,14 +66,18 @@ public class RepairService {
         return repairMapper.deleteOrder(id);
     }
 
-    //查找订单
+    /**
+     * 查找订单
+     */
     public PageInfo<Repair> find(Integer pageNum, Integer pageSize, String search) {
         PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
         List<Repair> list = repairMapper.find(search);
         return new PageInfo<>(list);
     }
 
-    //查询个人申报
+    /**
+     * 查询个人申报
+     */
     public PageInfo<Repair> individualFind(Integer pageNum, Integer pageSize, String search, String sId) {
         PageHelper.startPage((pageNum - 1) * pageSize, pageSize);
         List<Repair> list = repairMapper.individualFind(search, sId);

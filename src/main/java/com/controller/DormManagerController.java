@@ -76,11 +76,7 @@ public class DormManagerController {
                            @RequestParam(defaultValue = "10") Integer pageSize,
                            @RequestParam(defaultValue = "") String search) {
         PageInfo<DormManager> pageInfo = dormManagerService.find(pageNum, pageSize, search);
-        if (pageInfo != null) {
-            return Result.success(pageInfo);
-        } else {
-            return Result.error("查询失败");
-        }
+        return pageInfo != null ? Result.success(pageInfo) : Result.error("查询失败");
     }
 
 

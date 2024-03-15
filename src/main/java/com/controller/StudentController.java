@@ -19,14 +19,7 @@ public class StudentController {
 
     @Resource
     StudentService studentService;
-
-    @RequestLog
-    @PostMapping("/repair")
-    public Result Repair(@RequestBody Map<String, Object> map) {
-        studentService.repair(map);
-        return Result.success("报修成功，后续维修员会与您联系");
-    }
-
+    
     /**
      * 学生登录
      */
@@ -124,10 +117,6 @@ public class StudentController {
     @GetMapping("/stuNum")
     public Result stuNum() {
         int num = studentService.stuNum();
-        if (num > 0) {
-            return Result.success(num);
-        } else {
-            return Result.error("查询失败");
-        }
+        return num > 0 ? Result.success(num) : Result.error("查询失败");
     }
 }
