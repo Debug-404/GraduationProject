@@ -1,10 +1,10 @@
 package com.controller;
 
-import com.annotation.PassToken;
 import com.annotation.RequestLog;
 import com.github.pagehelper.PageInfo;
 import com.model.Student;
 import com.model.User;
+import com.annotation.PassToken;
 import com.service.StudentService;
 import com.utils.Result;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class StudentController {
 
     @Resource
     StudentService studentService;
-    
+
     /**
      * 学生登录
      */

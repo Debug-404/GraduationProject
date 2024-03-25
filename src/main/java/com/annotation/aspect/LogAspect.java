@@ -31,9 +31,7 @@ public class LogAspect {
     }
 
     /**
-     * AOP日志管理
-     *
-     * @param joinPoint
+     * 打印日志
      */
     @Before("logAspect()")
     public void beforePkhLog(JoinPoint joinPoint) {
