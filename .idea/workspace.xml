@@ -8,7 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ec1bed-ba93-44e8-a37d-d1e1d3c698d8" name="更改" comment="nest">
+      <change afterPath="$PROJECT_DIR$/bishe.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +39,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.76/tomcat-embed-core-9.0.76-sources.jar!/javax/servlet/http/HttpServlet.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="SKIP_INSPECTION" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,7 +51,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\apache-maven\maven-repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../apache-maven" />
         <option name="useMavenConfig" value="false" />
         <option name="userSettingsFile" value="D:\apache-maven\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -80,7 +90,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/源文件/java/SpringBootVue/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/下载/Atom_Material_Icons-94.1.0.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,7 +101,8 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d84519ae8ff870461e8d200047cd3f74&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -146,6 +157,13 @@
         <item itemvalue="JUnit.SpringBootVueApplicationTests.test1" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -309,6 +327,74 @@
       <workItem from="1711381168235" duration="20000" />
       <workItem from="1711381882099" duration="5367000" />
       <workItem from="1711444339421" duration="619000" />
+      <workItem from="1712846083615" duration="958000" />
+      <workItem from="1712966850035" duration="628000" />
+      <workItem from="1712973764381" duration="902000" />
+      <workItem from="1717230246059" duration="73000" />
+      <workItem from="1717230987917" duration="111000" />
+      <workItem from="1717231108176" duration="130000" />
+      <workItem from="1717231271919" duration="599000" />
+      <workItem from="1717407501689" duration="8000" />
+      <workItem from="1717555996430" duration="4000" />
+      <workItem from="1717557021950" duration="173000" />
+      <workItem from="1717606739167" duration="35000" />
+      <workItem from="1717651647791" duration="667000" />
+      <workItem from="1718790724555" duration="58000" />
+      <workItem from="1718790795283" duration="354000" />
+      <workItem from="1718791472515" duration="59000" />
+      <workItem from="1718791541942" duration="43000" />
+      <workItem from="1718791596279" duration="25000" />
+      <workItem from="1718791631950" duration="41000" />
+      <workItem from="1718791684603" duration="7000" />
+      <workItem from="1718802684002" duration="43000" />
+      <workItem from="1718816568533" duration="90000" />
+      <workItem from="1718816693278" duration="42000" />
+      <workItem from="1718816747975" duration="28000" />
+      <workItem from="1718851234872" duration="822000" />
+      <workItem from="1718852073882" duration="139000" />
+      <workItem from="1718852226576" duration="60000" />
+      <workItem from="1718852670796" duration="144000" />
+      <workItem from="1718852824794" duration="145000" />
+      <workItem from="1718852980449" duration="106000" />
+      <workItem from="1718853096313" duration="214000" />
+      <workItem from="1718853342518" duration="53000" />
+      <workItem from="1718853404598" duration="107000" />
+      <workItem from="1718853525759" duration="254000" />
+      <workItem from="1718853790058" duration="20000" />
+      <workItem from="1718853818637" duration="54000" />
+      <workItem from="1718854110113" duration="11000" />
+      <workItem from="1718854129194" duration="10000" />
+      <workItem from="1718854147471" duration="5000" />
+      <workItem from="1718855981510" duration="6000" />
+      <workItem from="1718855996189" duration="211000" />
+      <workItem from="1718856220509" duration="31000" />
+      <workItem from="1718856260044" duration="16000" />
+      <workItem from="1718856285842" duration="28000" />
+      <workItem from="1718856322850" duration="595000" />
+      <workItem from="1718872112809" duration="109000" />
+      <workItem from="1718872230814" duration="47000" />
+      <workItem from="1718872287377" duration="548000" />
+      <workItem from="1718872845363" duration="296000" />
+      <workItem from="1718873155617" duration="305000" />
+      <workItem from="1718873477659" duration="188000" />
+      <workItem from="1718887772020" duration="213000" />
+      <workItem from="1719380834002" duration="190000" />
+      <workItem from="1719381079023" duration="37000" />
+      <workItem from="1719381129312" duration="13000" />
+      <workItem from="1719722091278" duration="636000" />
+      <workItem from="1719746300544" duration="24000" />
+      <workItem from="1719915024520" duration="13000" />
+      <workItem from="1720977053175" duration="271000" />
+      <workItem from="1720977455484" duration="227000" />
+      <workItem from="1720978505354" duration="33000" />
+      <workItem from="1721094760987" duration="1529000" />
+      <workItem from="1721096320371" duration="46000" />
+      <workItem from="1721752910331" duration="91000" />
+      <workItem from="1729349471246" duration="145000" />
+      <workItem from="1729349628270" duration="82000" />
+      <workItem from="1729523125147" duration="67000" />
+      <workItem from="1729524018201" duration="161000" />
+      <workItem from="1730016958015" duration="132000" />
     </task>
     <task id="LOCAL-00001" summary="nest">
       <option name="closed" value="true" />
@@ -571,6 +657,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-websocket" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
