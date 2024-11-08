@@ -20,7 +20,8 @@ src/test
 *.iws
 *.iml
 *.ipr
-
+*.xml
+.idea/**
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
