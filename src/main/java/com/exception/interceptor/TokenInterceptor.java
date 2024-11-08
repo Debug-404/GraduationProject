@@ -1,9 +1,9 @@
 package com.exception.interceptor;
 
 import com.alibaba.fastjson2.JSON;
+import com.annotation.PassToken;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.annotation.PassToken;
 import com.utils.JwtUtils;
 import com.utils.Result;
 import org.springframework.web.method.HandlerMethod;
