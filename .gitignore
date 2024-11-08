@@ -21,7 +21,7 @@ src/test
 *.iml
 *.ipr
 *.xml
-.idea/**
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
